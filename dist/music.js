@@ -1,4 +1,5 @@
-const ap = new APlayer({
+const ap = new APlayer
+({
     container: document.getElementById('aplayer'),
     autoplay: false, //自动播放
     listFolded: true, //播放列表默认折叠
@@ -12,7 +13,7 @@ const ap = new APlayer({
     fixed: true, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
     audio: [
      {
-        name: "older",
+        name: 'older',
         artist: 'Sasha Sloan',
         url: 'http://183.252.54.23/amobile.music.tc.qq.com/C400001MA0E84aINBl.m4a?guid=769663282&vkey=86EDE8A6BBE9C3B6407921A24D77000F31E79D2A1569A8143B1935697B6DC0F75AD7A32676F56BE1363F403F8F25C40F459A665D8B3CB39F&uin=0&fromtag=66',
         cover: 'http://p1.music.126.net/vseT5laoB5QDPTD_7C-InQ==/109951163745732052.jpg?param=300x300',
