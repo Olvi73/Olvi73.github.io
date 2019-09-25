@@ -30,7 +30,7 @@
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
     mediumzoom: false,
@@ -225,10 +225,6 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 
     <main id="main" class="main">
@@ -528,7 +524,7 @@
       
         
       
-        <a href="https://github.com/Olvi73" title="GitHub &rarr; https://github.com/Olvi73" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/Olvi73" title="GitHub &rarr; https://github.com/Olvi73" rel="noopener" target="_blank"><i class="fa fa-fw fa-github-alt"></i>GitHub</a>
       </span>
     
       <span class="links-of-author-item">
@@ -550,7 +546,7 @@
       
         
       
-        <a href="https://music.163.com/#/user/home?id=81631214" title="网易云 &rarr; https://music.163.com/#/user/home?id=81631214" rel="noopener" target="_blank"><i class="fa fa-fw fa-compact-disc"></i>网易云</a>
+        <a href="https://music.163.com/#/user/home?id=81631214" title="网易云 &rarr; https://music.163.com/#/user/home?id=81631214" rel="noopener" target="_blank"><i class="fa fa-fw fa-headphones"></i>网易云</a>
       </span>
     
   </div>
@@ -559,6 +555,19 @@
 
       </div>
 
+
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
+       
+          
+    
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
@@ -574,6 +583,20 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Olvi73</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">0k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">1 分钟</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
   <span class="post-meta-divider">|</span>
@@ -639,6 +662,11 @@
   
 
   
+
+
+
+
+
 
   <!-- 页面点击小红心，在末尾添加，避免找不到 -->
   
