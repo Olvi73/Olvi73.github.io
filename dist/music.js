@@ -12,18 +12,8 @@ const ap = new APlayer
     volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
     fixed: true, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
     audio: [
-     {
-        name: 'older',
-        artist: 'Sasha Sloan',
-        url: 'https://183.252.54.23/amobile.music.tc.qq.com/C400001MA0E84aINBl.m4a?guid=769663282&vkey=86EDE8A6BBE9C3B6407921A24D77000F31E79D2A1569A8143B1935697B6DC0F75AD7A32676F56BE1363F403F8F25C40F459A665D8B3CB39F&uin=0&fromtag=66',
-        cover: 'https://p1.music.126.net/vseT5laoB5QDPTD_7C-InQ==/109951163745732052.jpg?param=300x300',
-      },
-      {
-        name: 'Friends',
-        artist: 'E^ST',
-        url: 'https://ws.stream.qqmusic.qq.com/C4000044x6ay0fMM7H.m4a?guid=840744131&vkey=B0F741C2911D833AC4244697948288D0D5DF4DC9280CA1618A4607FF16DB48E772068C15A7A20EBE7582996EEB57FFD2B151D76E98FB33DE&uin=0&fromtag=66',
-        cover: 'https://p2.music.126.net/IeOjL8tH0MSDvQTgpgwK_g==/109951163621882196.jpg?param=300x300',
-      },
+     
+
       {
         name: 'In Too Deep',
         artist: 'Why Dont We',
