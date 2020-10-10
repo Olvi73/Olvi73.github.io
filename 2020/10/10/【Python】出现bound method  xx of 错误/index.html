@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
 <meta property="og:description" content="Python调用类方法时的常见错误">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-10-10T13:50:21.358Z">
+<meta property="og:updated_time" content="2020-10-10T13:52:08.334Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Python】出现bound method 错误">
 <meta name="twitter:description" content="Python调用类方法时的常见错误">
@@ -274,7 +274,7 @@
                 
               
 
-              <time title="创建时间：2020-10-10 21:49:34 / 修改时间：21:50:21" itemprop="dateCreated datePublished" datetime="2020-10-10T21:49:34+08:00">2020-10-10</time>
+              <time title="创建时间：2020-10-10 21:49:34 / 修改时间：21:52:08" itemprop="dateCreated datePublished" datetime="2020-10-10T21:49:34+08:00">2020-10-10</time>
             </span>
           
             
@@ -338,7 +338,7 @@
         <p>Python调用类方法时的常见错误</p>
 <a id="more"></a>
 
-<p>错误提示：<code>&lt;bound method Mlei.GetInfo of &lt;__main__.Mlei object at 0x00000131F0235EB0&gt;&gt;</code>  </p>
+<p>错误提示：<br><code>&lt;bound method Mlei.GetInfo of &lt;__main__.Mlei object at 0x00000131F0235EB0&gt;&gt;</code>  </p>
 <p>源代码：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Mlei</span>:</span></span><br><span class="line">    name=<span class="string">"Leya"</span></span><br><span class="line">    sex=<span class="string">"woman"</span></span><br><span class="line">    __age=<span class="number">25</span></span><br><span class="line">    __weight=<span class="number">50</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">GetInfo</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> print(<span class="string">"name:%s,sex:%s"</span>%(self.name,self.sex))</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__GetMoreInfo</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> print(<span class="string">"age:%s,weight:%s"</span>%(self.__age,self.__weight))</span><br><span class="line">c1=Mlei()</span><br><span class="line">c2=Mlei()</span><br><span class="line">print(<span class="string">"访问公有类属性："</span>,c1.name,c1.sex)</span><br><span class="line">print(<span class="string">"访问公有类方法："</span>,end=<span class="string">' '</span>)</span><br><span class="line">c1.GetInfo</span><br></pre></td></tr></table></figure>
 
