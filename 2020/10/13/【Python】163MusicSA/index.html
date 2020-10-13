@@ -56,18 +56,18 @@
   };
 </script>
 
-  <meta name="description" content="163 Music Self Analysis-通过python爬取听歌排行中的歌词信息，然后对歌词进行处理，最后生成词云或者其他可视化图形，完成分析。参考代码地址：NacedWang/163MusicSpider    由于原程序的数据库储存在Mysql中，但是本人之前所学的数据库为Sql Server，所以需要重新学习相关的知识。 学习进度：Day 1">
+  <meta name="description" content="163 Music Self Analysis">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Python】163MusicSA-分析自己听歌排行中歌曲出现的歌词">
+<meta property="og:title" content="【Python】163MusicSA-分析听歌排行中出现的歌词频率">
 <meta property="og:url" content="https://Olvi73.github.io/2020/10/13/【Python】163MusicSA/index.html">
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
-<meta property="og:description" content="163 Music Self Analysis-通过python爬取听歌排行中的歌词信息，然后对歌词进行处理，最后生成词云或者其他可视化图形，完成分析。参考代码地址：NacedWang/163MusicSpider    由于原程序的数据库储存在Mysql中，但是本人之前所学的数据库为Sql Server，所以需要重新学习相关的知识。 学习进度：Day 1">
+<meta property="og:description" content="163 Music Self Analysis">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-10-13T09:05:11.179Z">
+<meta property="og:updated_time" content="2020-10-13T14:55:41.684Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Python】163MusicSA-分析自己听歌排行中歌曲出现的歌词">
-<meta name="twitter:description" content="163 Music Self Analysis-通过python爬取听歌排行中的歌词信息，然后对歌词进行处理，最后生成词云或者其他可视化图形，完成分析。参考代码地址：NacedWang/163MusicSpider    由于原程序的数据库储存在Mysql中，但是本人之前所学的数据库为Sql Server，所以需要重新学习相关的知识。 学习进度：Day 1">
+<meta name="twitter:title" content="【Python】163MusicSA-分析听歌排行中出现的歌词频率">
+<meta name="twitter:description" content="163 Music Self Analysis">
   <link rel="canonical" href="https://Olvi73.github.io/2020/10/13/【Python】163MusicSA/">
 
 
@@ -82,7 +82,7 @@
   };
 </script>
 
-  <title>【Python】163MusicSA-分析自己听歌排行中歌曲出现的歌词 | Olvi73's Blog</title>
+  <title>【Python】163MusicSA-分析听歌排行中出现的歌词频率 | Olvi73's Blog</title>
   
 
 
@@ -258,7 +258,7 @@
       <meta itemprop="name" content="Olvi73's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">【Python】163MusicSA-分析自己听歌排行中歌曲出现的歌词
+        <h1 class="post-title" itemprop="name headline">【Python】163MusicSA-分析听歌排行中出现的歌词频率
 
           
         </h1>
@@ -274,7 +274,7 @@
                 
               
 
-              <time title="创建时间：2020-10-13 14:39:58 / 修改时间：17:05:11" itemprop="dateCreated datePublished" datetime="2020-10-13T14:39:58+08:00">2020-10-13</time>
+              <time title="创建时间：2020-10-13 14:39:58 / 修改时间：22:55:41" itemprop="dateCreated datePublished" datetime="2020-10-13T14:39:58+08:00">2020-10-13</time>
             </span>
           
             
@@ -312,7 +312,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>169</span>
+              <span>247</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -335,11 +335,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <blockquote>
+        <h2 id="163-Music-Self-Analysis"><a href="#163-Music-Self-Analysis" class="headerlink" title="163 Music Self Analysis"></a>163 Music Self Analysis</h2><a id="more"></a>
+<blockquote>
 <p>163 Music Self Analysis-通过python爬取听歌排行中的歌词信息，然后对歌词进行处理，最后生成词云或者其他可视化图形，完成分析。<br>参考代码地址：<a href="https://github.com/NacedWang/163MusicSpider" target="_blank" rel="noopener">NacedWang/163MusicSpider</a>  </p>
 </blockquote>
-<p>由于原程序的数据库储存在Mysql中，但是本人之前所学的数据库为Sql Server，所以需要重新学习相关的知识。</p>
-<h2 id="学习进度："><a href="#学习进度：" class="headerlink" title="学习进度："></a>学习进度：</h2><h3 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h3>
+<p>由于原程序的数据库储存在Mysql中，但是本人之前所学的数据库为Sql Server，所以需要重新学习相关的知识。<br>当前进度：  </p>
+<ul>
+<li><input checked disabled type="checkbox"> MySql安装</li>
+<li><input checked disabled type="checkbox"> 成功爬取信息到数据库</li>
+<li><input checked disabled type="checkbox"> 找到无法click选择所有时间的问题</li>
+<li><input disabled type="checkbox"> 通过歌曲id爬取歌词到数据库</li>
+<li><input disabled type="checkbox"> 生成词云<h2 id="学习进度："><a href="#学习进度：" class="headerlink" title="学习进度："></a>学习进度：</h2></li>
+</ul>
+<h3 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h3>
     </div>
 
     
@@ -425,7 +433,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#学习进度："><span class="nav-text">学习进度：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-1"><span class="nav-text">Day 1</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#163-Music-Self-Analysis"><span class="nav-text">163 Music Self Analysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习进度："><span class="nav-text">学习进度：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-1"><span class="nav-text">Day 1</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
