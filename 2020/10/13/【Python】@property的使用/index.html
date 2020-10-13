@@ -56,18 +56,18 @@
   };
 </script>
 
-  <meta name="description" content="参考链接 @廖雪峰@人生与戏@北方卧龙  解决的问题：在对输入的数据进行限制的同时，对该函数能够像调用类中的对象一样方便 使用方法： 12345678910111213141516class test:    def __init__(self):        self.__s =60    @property             #加上@property修饰器    def score(s">
+  <meta name="description" content="解决的问题：在对输入的数据进行限制的同时，对该函数能够像调用类中的对象一样方便">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Python】@property的使用">
 <meta property="og:url" content="https://Olvi73.github.io/2020/10/13/【Python】@property的使用/index.html">
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
-<meta property="og:description" content="参考链接 @廖雪峰@人生与戏@北方卧龙  解决的问题：在对输入的数据进行限制的同时，对该函数能够像调用类中的对象一样方便 使用方法： 12345678910111213141516class test:    def __init__(self):        self.__s =60    @property             #加上@property修饰器    def score(s">
+<meta property="og:description" content="解决的问题：在对输入的数据进行限制的同时，对该函数能够像调用类中的对象一样方便">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-10-13T09:44:32.713Z">
+<meta property="og:updated_time" content="2020-10-13T09:47:45.655Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Python】@property的使用">
-<meta name="twitter:description" content="参考链接 @廖雪峰@人生与戏@北方卧龙  解决的问题：在对输入的数据进行限制的同时，对该函数能够像调用类中的对象一样方便 使用方法： 12345678910111213141516class test:    def __init__(self):        self.__s =60    @property             #加上@property修饰器    def score(s">
+<meta name="twitter:description" content="解决的问题：在对输入的数据进行限制的同时，对该函数能够像调用类中的对象一样方便">
   <link rel="canonical" href="https://Olvi73.github.io/2020/10/13/【Python】@property的使用/">
 
 
@@ -274,7 +274,7 @@
                 
               
 
-              <time title="创建时间：2020-10-13 17:03:59 / 修改时间：17:44:32" itemprop="dateCreated datePublished" datetime="2020-10-13T17:03:59+08:00">2020-10-13</time>
+              <time title="创建时间：2020-10-13 17:03:59 / 修改时间：17:47:45" itemprop="dateCreated datePublished" datetime="2020-10-13T17:03:59+08:00">2020-10-13</time>
             </span>
           
             
@@ -312,7 +312,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>522</span>
+              <span>521</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -335,15 +335,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><blockquote>
+        <p><strong>解决的问题</strong>：在对输入的数据进行限制的同时，对该函数能够像调用类中的对象一样方便</p>
+<a id="more"></a>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><blockquote>
 <p><a href="https://www.liaoxuefeng.com/wiki/897692888725344/923030547069856" target="_blank" rel="noopener">@廖雪峰</a><br><a href="https://www.cnblogs.com/FlyingLiao/p/11334097.html" target="_blank" rel="noopener">@人生与戏</a><br><a href="https://www.cnblogs.com/mashuqi/p/11354449.html" target="_blank" rel="noopener">@北方卧龙</a></p>
 </blockquote>
-<p><strong>解决的问题</strong>：在对输入的数据进行限制的同时，对该函数能够像调用类中的对象一样方便</p>
-<p>使用方法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">test</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.__s =<span class="number">60</span></span><br><span class="line"><span class="meta">    @property             #加上@property修饰器</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">score</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.__s</span><br><span class="line"><span class="meta">    @score.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">score</span><span class="params">(self,value)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> value &lt; <span class="number">0</span> <span class="keyword">or</span> value &gt; <span class="number">100</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">'分数必须介于0-100之间'</span>)</span><br><span class="line">        self.__s=value</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setscore</span><span class="params">(self,value)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> value &lt; <span class="number">0</span> <span class="keyword">or</span> value &gt; <span class="number">100</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">'分数必须介于0-100之间'</span>)</span><br><span class="line">        self.__s=value</span><br><span class="line">p=test()</span><br></pre></td></tr></table></figure>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">test</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.__s =<span class="number">60</span></span><br><span class="line"><span class="meta">    @property             #加上@property修饰器</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">score</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.__s</span><br><span class="line"><span class="meta">    @score.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">score</span><span class="params">(self,value)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> value &lt; <span class="number">0</span> <span class="keyword">or</span> value &gt; <span class="number">100</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">'分数必须介于0-100之间'</span>)</span><br><span class="line">        self.__s=value</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setscore</span><span class="params">(self,value)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> value &lt; <span class="number">0</span> <span class="keyword">or</span> value &gt; <span class="number">100</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">'分数必须介于0-100之间'</span>)</span><br><span class="line">        self.__s=value</span><br><span class="line">p=test()</span><br></pre></td></tr></table></figure>
 
-<p>输出结果</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">p.score</span><br><span class="line">Out[<span class="number">55</span>]: <span class="number">60</span></span><br><span class="line"></span><br><span class="line">p.setscore(<span class="number">80</span>)       <span class="comment">#不使用property的调用</span></span><br><span class="line"></span><br><span class="line">p.score</span><br><span class="line">Out[<span class="number">57</span>]: <span class="number">80</span></span><br><span class="line"></span><br><span class="line">p.score=<span class="number">100</span>          <span class="comment">#使用了property和setter的调用</span></span><br><span class="line"></span><br><span class="line">p.score</span><br><span class="line">Out[<span class="number">59</span>]: <span class="number">100</span></span><br></pre></td></tr></table></figure>
+<h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">p.score</span><br><span class="line">Out[<span class="number">55</span>]: <span class="number">60</span></span><br><span class="line"></span><br><span class="line">p.setscore(<span class="number">80</span>)       <span class="comment">#不使用property的调用</span></span><br><span class="line"></span><br><span class="line">p.score</span><br><span class="line">Out[<span class="number">57</span>]: <span class="number">80</span></span><br><span class="line"></span><br><span class="line">p.score=<span class="number">100</span>          <span class="comment">#使用了property和setter的调用</span></span><br><span class="line"></span><br><span class="line">p.score</span><br><span class="line">Out[<span class="number">59</span>]: <span class="number">100</span></span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -427,7 +426,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-text">参考链接</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-text">参考链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方法"><span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出结果"><span class="nav-text">输出结果</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
