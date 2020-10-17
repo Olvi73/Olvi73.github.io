@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
 <meta property="og:description" content="163 Music Self Analysis">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-10-16T14:14:46.574Z">
+<meta property="og:updated_time" content="2020-10-17T04:41:25.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Python】163MusicSA-统计你的听歌排行中出现最多的歌词">
 <meta name="twitter:description" content="163 Music Self Analysis">
@@ -285,7 +285,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-16 22:14:46" itemprop="dateModified" datetime="2020-10-16T22:14:46+08:00">2020-10-16</time>
+                <time title="修改时间：2020-10-17 12:41:25" itemprop="dateModified" datetime="2020-10-17T12:41:25+08:00">2020-10-17</time>
               </span>
             
           
@@ -320,7 +320,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>597</span>
+              <span>757</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -348,8 +348,8 @@
 <blockquote>
 <p>163 Music Self Analysis-通过python爬取听歌排行中的歌词信息，然后对歌词进行处理，最后生成词云或者其他可视化图形，完成分析。<br>参考代码地址：<br><a href="https://github.com/NacedWang/163MusicSpider" target="_blank" rel="noopener">NacedWang/163MusicSpider</a> 基础代码部分<br><a href="https://blog.csdn.net/u010890916/article/details/106879465/" target="_blank" rel="noopener">Samaritan·J</a> 实现爬取个人排行界面  </p>
 </blockquote>
-<p><del>由于原程序的数据库储存在Mysql中，但是本人之前所学的数据库为Sql Server，所以需要重新学习相关的知识。</del><br><del>多线程运行，可能会触发反爬虫引发其他错误，放弃。</del></p>
-<h2 id="当前进度："><a href="#当前进度：" class="headerlink" title="当前进度："></a>当前进度：</h2><ul>
+<p><del>由于原程序的数据库储存在Mysql中，但是本人之前所学的数据库为Sql Server，所以需要重新学习相关的知识。</del><br><del>多线程运行，可能会触发反爬虫引发其他错误，放弃。</del><br><del>为了实现无界面打开网页，寻找其他方法代替selenium，使程序能够方便的运行到其他电脑上</del> <strong>直接设置<code>Option.headless=True</code>实现无界面打开</strong>  </p>
+<h2 id="进度："><a href="#进度：" class="headerlink" title="进度："></a>进度：</h2><ul>
 <li><p><strong>2020/10/13</strong>  </p>
 <ul>
 <li><input checked disabled type="checkbox"> MySql安装</li>
@@ -373,15 +373,28 @@
 <li><p><strong>2020/10/16</strong></p>
 <ul>
 <li><input checked disabled type="checkbox"> 优化sql模块，去除不需要的方法</li>
-<li><input checked disabled type="checkbox"> 调整MySql数据库，将之前测试用的表(如music2)改成正式表名music</li>
+<li><input checked disabled type="checkbox"> 调整MySql数据库，将之前测试用的表(如music2)全部改成正式表名(如music)</li>
 <li><input checked disabled type="checkbox"> 调整图片输出位置，统一输出到wordcloud文件夹</li>
 </ul>
 </li>
+<li><p><strong>2020/10/17</strong></p>
+<ul>
+<li><input checked disabled type="checkbox"> 首次使用Pycharm，配置好conda环境</li>
+<li><input checked disabled type="checkbox"> 优化数据库，添加以用户id为主键的列，全表保存。不再需要每次运行前清库，相同的歌曲不需要重复储存歌词</li>
+<li><input checked disabled type="checkbox"> 根据数据库的调整，重新优化代码。只需在main中输入id，其他文件自动运行并输出</li>
+<li><input checked disabled type="checkbox"> 处理歌词方法clearInf的if判断改成try、except</li>
+<li><input checked disabled type="checkbox"> 使用Pycharm进行commit、push操作</li>
 </ul>
-<h2 id="未来目标："><a href="#未来目标：" class="headerlink" title="未来目标："></a>未来目标：</h2><pre><code>- [ ] 优化数据库，添加以用户id为主键的列，全表保存。不再需要每次运行前清库，相同的歌曲不需要重复储存歌词
-- [ ] 根据数据库的调整，重新优化代码
-- [ ] 简单gui界面，实现输入用户id自动爬取并输出图片
-- [ ] 寻找其他方法代替selenium，使程序能够方便的运行到其他电脑上</code></pre>
+</li>
+</ul>
+<h2 id="待完善："><a href="#待完善：" class="headerlink" title="待完善："></a>待完善：</h2><ul>
+<li><ul>
+<li><input disabled type="checkbox"> 简单gui界面，实现输入用户id自动爬取并输出图片</li>
+<li><input disabled type="checkbox"> 打包成exe文件，自带运行环境</li>
+</ul>
+</li>
+</ul>
+
     </div>
 
     
@@ -467,7 +480,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#当前进度："><span class="nav-text">当前进度：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未来目标："><span class="nav-text">未来目标：</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#进度："><span class="nav-text">进度：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待完善："><span class="nav-text">待完善：</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
