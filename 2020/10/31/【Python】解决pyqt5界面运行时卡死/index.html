@@ -56,14 +56,19 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Olvi73&#39;s Blog">
-<meta property="og:url" content="https://Olvi73.github.io/categories/Github/index.html">
+  <meta name="description" content="GUI编程常见问题">
+<meta name="keywords" content="Python,Qt Designer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Python】解决pyqt5界面运行时卡死">
+<meta property="og:url" content="https://Olvi73.github.io/2020/10/31/【Python】解决pyqt5界面运行时卡死/index.html">
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
+<meta property="og:description" content="GUI编程常见问题">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-10-31T04:17:54.115Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Olvi73&#39;s Blog">
-  <link rel="canonical" href="https://Olvi73.github.io/categories/Github/">
+<meta name="twitter:title" content="【Python】解决pyqt5界面运行时卡死">
+<meta name="twitter:description" content="GUI编程常见问题">
+  <link rel="canonical" href="https://Olvi73.github.io/2020/10/31/【Python】解决pyqt5界面运行时卡死/">
 
 
 <script id="page-configurations">
@@ -71,13 +76,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>分类: Github | Olvi73's Blog</title>
+  <title>【Python】解决pyqt5界面运行时卡死 | Olvi73's Blog</title>
   
 
 
@@ -232,84 +237,168 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block category">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">Github<small>分类</small>
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://Olvi73.github.io/2020/10/31/【Python】解决pyqt5界面运行时卡死/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Olvi73">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Olvi73's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">【Python】解决pyqt5界面运行时卡死
+
+          
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-10-31 11:57:14 / 修改时间：12:17:54" itemprop="dateCreated datePublished" datetime="2020-10-31T11:57:14+08:00">2020-10-31</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>601</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+        <p>GUI编程常见问题</p>
+<a id="more"></a>
 
-  
-  
+<blockquote>
+<p><a href="https://blog.csdn.net/wbdxz/article/details/86290139" target="_blank" rel="noopener">SeniorZ-PyQt5+socket编程界面卡住未响应</a></p>
+</blockquote>
+<h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>在使用Qt Desinger设计gui界面后，在python中运行界面使用按钮时，界面出现假卡死。  </p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>gui界面运行后会作为主线程，若在主线程中进行耗时操作，就会导致界面出现假死的情况</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>使用多线程，将耗时操作放在其他线程进行，主线程就不会受到影响</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyMainForm</span><span class="params">(QMainWindow, Ui_MainWindow)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></span><br><span class="line">    super(MyMainForm, self).__init__(parent)</span><br><span class="line">    self.setupUi(self)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#新线程</span></span><br><span class="line">    self.th = <span class="literal">None</span></span><br><span class="line">    <span class="comment">#耗时操作</span></span><br><span class="line">    self.musicSpider_Button.clicked.connect(self.musicSpider)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">musicSpider</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.th = threading.Thread(target=self.ms)</span><br><span class="line">        <span class="comment"># 设置线程为守护线程，防止退出主线程时，子线程仍在运行</span></span><br><span class="line">        self.th.setDaemon(<span class="literal">True</span>)</span><br><span class="line">        <span class="comment"># 新线程启动</span></span><br><span class="line">        self.th.start()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">ms</span><span class="params">(self)</span>:</span></span><br><span class="line">        musicSpider(self.user_idEdit.text())</span><br></pre></td></tr></table></figure>
 
-  
+
+    </div>
+
     
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
+    
+    
         
-          <a class="post-title-link" href="/2020/10/12/Github Badge 使用教程/" itemprop="url">
-            <span itemprop="name">Github Badge 使用教程</span>
-          </a>
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Python/" rel="tag"># Python</a>
+            
+              <a href="/tags/Qt-Designer/" rel="tag"># Qt Designer</a>
+            
+          </div>
         
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-10-12T15:14:15+08:00"
-              content="2020-10-12">
-          10-12
-        </time>
-      </div>
+        
 
-    </header>
-  </article>
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/10/13/【Python】@property的使用/" rel="next" title="【Python】@property的使用">
+                  <i class="fa fa-chevron-left"></i> 【Python】@property的使用
+                </a>
+              
+            </div>
 
+            <span class="post-nav-divider"></span>
 
-
-    </div>
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/10/31/【Python】解决Sqlite多线程检测/" rel="prev" title="【Python】解决Sqlite多线程检测">
+                  【Python】解决Sqlite多线程检测 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
@@ -328,6 +417,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -340,6 +434,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#现象"><span class="nav-text">现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-text">解决办法</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 

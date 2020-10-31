@@ -56,14 +56,19 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Olvi73&#39;s Blog">
-<meta property="og:url" content="https://Olvi73.github.io/categories/Github/index.html">
+  <meta name="description" content="Python连接Sqlite问题">
+<meta name="keywords" content="Python,Qt Designer,Sqlite">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Python】解决Sqlite多线程检测">
+<meta property="og:url" content="https://Olvi73.github.io/2020/10/31/【Python】解决Sqlite多线程检测/index.html">
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
+<meta property="og:description" content="Python连接Sqlite问题">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-10-31T04:35:04.042Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Olvi73&#39;s Blog">
-  <link rel="canonical" href="https://Olvi73.github.io/categories/Github/">
+<meta name="twitter:title" content="【Python】解决Sqlite多线程检测">
+<meta name="twitter:description" content="Python连接Sqlite问题">
+  <link rel="canonical" href="https://Olvi73.github.io/2020/10/31/【Python】解决Sqlite多线程检测/">
 
 
 <script id="page-configurations">
@@ -71,13 +76,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>分类: Github | Olvi73's Blog</title>
+  <title>【Python】解决Sqlite多线程检测 | Olvi73's Blog</title>
   
 
 
@@ -232,84 +237,164 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block category">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">Github<small>分类</small>
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://Olvi73.github.io/2020/10/31/【Python】解决Sqlite多线程检测/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Olvi73">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Olvi73's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">【Python】解决Sqlite多线程检测
+
+          
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-10-31 12:16:13 / 修改时间：12:35:04" itemprop="dateCreated datePublished" datetime="2020-10-31T12:16:13+08:00">2020-10-31</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>420</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+        <p>Python连接Sqlite问题</p>
+<a id="more"></a>
+<h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p><code>ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id *** and this is thread id ***.</code></p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection = sqlite3.connect(<span class="string">'data.db'</span>)</span><br></pre></td></tr></table></figure>
 
-  
-  
+<p>在导入连接数据库的module时，自动连接了数据库，但是为了GUI界面不卡死，在执行对应语句的时候使用的是新建的线程。<br>而sqlite在进行执行增删改操作的时候，操作所在线程必须和connection所在线程一致，但是对于查找操作允许多线程。  </p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection = sqlite3.connect(<span class="string">'data.db'</span>, check_same_thread=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
 
-  
+<p>将检测同线程关闭，为了不产生其他麻烦，要确保在进行数据库操作的时候只有一个线程在增删改数据库。  </p>
+
+    </div>
+
     
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
+    
+    
         
-          <a class="post-title-link" href="/2020/10/12/Github Badge 使用教程/" itemprop="url">
-            <span itemprop="name">Github Badge 使用教程</span>
-          </a>
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Python/" rel="tag"># Python</a>
+            
+              <a href="/tags/Qt-Designer/" rel="tag"># Qt Designer</a>
+            
+              <a href="/tags/Sqlite/" rel="tag"># Sqlite</a>
+            
+          </div>
         
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-10-12T15:14:15+08:00"
-              content="2020-10-12">
-          10-12
-        </time>
-      </div>
+        
 
-    </header>
-  </article>
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/10/31/【Python】解决pyqt5界面运行时卡死/" rel="next" title="【Python】解决pyqt5界面运行时卡死">
+                  <i class="fa fa-chevron-left"></i> 【Python】解决pyqt5界面运行时卡死
+                </a>
+              
+            </div>
 
+            <span class="post-nav-divider"></span>
 
-
-    </div>
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
@@ -328,6 +413,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -340,6 +430,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#现象"><span class="nav-text">现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-text">解决办法</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
