@@ -56,19 +56,18 @@
   };
 </script>
 
-  <meta name="description" content="Python调用类方法时的常见错误">
-<meta name="keywords" content="Python">
+  <meta name="description" content="AcWing 104. 货仓选址">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Python】出现bound method 错误">
-<meta property="og:url" content="https://Olvi73.github.io/2020/10/10/【Python】出现bound method  xx of 错误/index.html">
+<meta property="og:title" content="【每日一题】AcWing 104. 货仓选址">
+<meta property="og:url" content="https://Olvi73.github.io/2021/01/09/AcWing 104. 货仓选址/index.html">
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
-<meta property="og:description" content="Python调用类方法时的常见错误">
+<meta property="og:description" content="AcWing 104. 货仓选址">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-10-10T13:52:08.334Z">
+<meta property="og:updated_time" content="2021-01-09T15:47:02.528Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Python】出现bound method 错误">
-<meta name="twitter:description" content="Python调用类方法时的常见错误">
-  <link rel="canonical" href="https://Olvi73.github.io/2020/10/10/【Python】出现bound method  xx of 错误/">
+<meta name="twitter:title" content="【每日一题】AcWing 104. 货仓选址">
+<meta name="twitter:description" content="AcWing 104. 货仓选址">
+  <link rel="canonical" href="https://Olvi73.github.io/2021/01/09/AcWing 104. 货仓选址/">
 
 
 <script id="page-configurations">
@@ -82,7 +81,7 @@
   };
 </script>
 
-  <title>【Python】出现bound method 错误 | Olvi73's Blog</title>
+  <title>【每日一题】AcWing 104. 货仓选址 | Olvi73's Blog</title>
   
 
 
@@ -246,7 +245,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://Olvi73.github.io/2020/10/10/【Python】出现bound method  xx of 错误/">
+    <link itemprop="mainEntityOfPage" href="https://Olvi73.github.io/2021/01/09/AcWing 104. 货仓选址/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Olvi73">
@@ -258,7 +257,7 @@
       <meta itemprop="name" content="Olvi73's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">【Python】出现bound method 错误
+        <h1 class="post-title" itemprop="name headline">【每日一题】AcWing 104. 货仓选址
 
           
         </h1>
@@ -274,25 +273,12 @@
                 
               
 
-              <time title="创建时间：2020-10-10 21:49:34 / 修改时间：21:52:08" itemprop="dateCreated datePublished" datetime="2020-10-10T21:49:34+08:00">2020-10-10</time>
+              <time title="创建时间：2021-01-09 23:40:28 / 修改时间：23:47:02" itemprop="dateCreated datePublished" datetime="2021-01-09T23:40:28+08:00">2021-01-09</time>
             </span>
           
             
 
             
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Error/" itemprop="url" rel="index"><span itemprop="name">Error</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -312,7 +298,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>556</span>
+              <span>1.1k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -335,18 +321,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Python调用类方法时的常见错误</p>
+        <p><a href="https://www.acwing.com/problem/content/106/" target="_blank" rel="noopener">AcWing 104. 货仓选址</a></p>
 <a id="more"></a>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>中位数是最优解</p>
+<h4 id="相关题目"><a href="#相关题目" class="headerlink" title="相关题目"></a>相关题目</h4><ul>
+<li>一维拓展二维：<a href="https://www.acwing.com/problem/content/3170/" target="_blank" rel="noopener">3167. 星星还是树</a></li>
+<li>拓展n维：模拟退火算法</li>
+</ul>
+<h4 id="拓展知识"><a href="#拓展知识" class="headerlink" title="拓展知识"></a>拓展知识</h4><ul>
+<li>将第n个数放在正确的位置上<a href="https://blog.csdn.net/sugarbliss/article/details/88050145" target="_blank" rel="noopener">nth_element</a></li>
+<li>位运算 i&gt;&gt;1</li>
+<li>for() shift 9 0，快速退出括号</li>
+</ul>
+<h4 id="写法1-O-nlogn"><a href="#写法1-O-nlogn" class="headerlink" title="写法1 $O(nlogn)$"></a>写法1 $O(nlogn)$</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">    sort(a, a + n);</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) res += <span class="built_in">abs</span>(a[i] - a[n / <span class="number">2</span>]);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; res &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>错误提示：<br><code>&lt;bound method Mlei.GetInfo of &lt;__main__.Mlei object at 0x00000131F0235EB0&gt;&gt;</code>  </p>
-<p>源代码：  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Mlei</span>:</span></span><br><span class="line">    name=<span class="string">"Leya"</span></span><br><span class="line">    sex=<span class="string">"woman"</span></span><br><span class="line">    __age=<span class="number">25</span></span><br><span class="line">    __weight=<span class="number">50</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">GetInfo</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> print(<span class="string">"name:%s,sex:%s"</span>%(self.name,self.sex))</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__GetMoreInfo</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> print(<span class="string">"age:%s,weight:%s"</span>%(self.__age,self.__weight))</span><br><span class="line">c1=Mlei()</span><br><span class="line">c2=Mlei()</span><br><span class="line">print(<span class="string">"访问公有类属性："</span>,c1.name,c1.sex)</span><br><span class="line">print(<span class="string">"访问公有类方法："</span>,end=<span class="string">' '</span>)</span><br><span class="line">c1.GetInfo</span><br></pre></td></tr></table></figure>
+<h4 id="写法-2-O-nlogn"><a href="#写法-2-O-nlogn" class="headerlink" title="写法 2$O(nlogn)$"></a>写法 2$O(nlogn)$</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">    sort(a, a + n);</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) res += <span class="built_in">abs</span>(a[i] - a[i / <span class="number">2</span>]);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; res &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>运行结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">访问公有类属性： Leya woman</span><br><span class="line">访问公有类方法： &lt;bound method Mlei.GetInfo of &lt;__main__.Mlei object at 0x00000131F0235EB0&gt;&gt;</span><br></pre></td></tr></table></figure>
-
-<p>错误原因：调用方法时，没有加上括号，正确调用方法<code>c1.GetInfo()</code></p>
-
+<h4 id="写法3-O-n"><a href="#写法3-O-n" class="headerlink" title="写法3 $O(n)$"></a>写法3 $O(n)$</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">    nth_element(a, a + n / <span class="number">2</span>, a + n);</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) res += <span class="built_in">abs</span>(a[i] - a[n / <span class="number">2</span>]);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; res &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -356,23 +347,14 @@
       
 
       <footer class="post-footer">
-          
-            
-          
-          <div class="post-tags">
-            
-              <a href="/tags/Python/" rel="tag"># Python</a>
-            
-          </div>
-        
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/10/06/【鬼才代码】12 Days of Christmas/" rel="next" title="【鬼才代码】12 Days of Christmas">
-                  <i class="fa fa-chevron-left"></i> 【鬼才代码】12 Days of Christmas
+                <a href="/2020/10/31/【Python】解决Sqlite多线程检测/" rel="next" title="【Python】解决Sqlite多线程检测">
+                  <i class="fa fa-chevron-left"></i> 【Python】解决Sqlite多线程检测
                 </a>
               
             </div>
@@ -380,10 +362,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/10/12/Github Badge 使用教程/" rel="prev" title="Github Badge 使用教程">
-                  Github Badge 使用教程 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -432,6 +410,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关题目"><span class="nav-text">相关题目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展知识"><span class="nav-text">拓展知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写法1-O-nlogn"><span class="nav-text">写法1 $O(nlogn)$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写法-2-O-nlogn"><span class="nav-text">写法 2$O(nlogn)$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写法3-O-n"><span class="nav-text">写法3 $O(n)$</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
