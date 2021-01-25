@@ -56,19 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="Python连接Sqlite问题">
-<meta name="keywords" content="Python,Qt Designer,Sqlite">
+  <meta name="description" content="Day2 AcWing 898. 数字三角形">
+<meta name="keywords" content="Algorithm,C++,dp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Python】解决Sqlite多线程检测">
-<meta property="og:url" content="https://Olvi73.github.io/2020/10/31/【Python】解决Sqlite多线程检测/index.html">
+<meta property="og:title" content="【每日一题】AcWing 898. 数字三角形">
+<meta property="og:url" content="https://Olvi73.github.io/2021/01/25/【每日一题】-AcWing-898-数字三角形/index.html">
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
-<meta property="og:description" content="Python连接Sqlite问题">
+<meta property="og:description" content="Day2 AcWing 898. 数字三角形">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-01-25T07:28:23.611Z">
+<meta property="og:updated_time" content="2021-01-25T07:49:34.782Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Python】解决Sqlite多线程检测">
-<meta name="twitter:description" content="Python连接Sqlite问题">
-  <link rel="canonical" href="https://Olvi73.github.io/2020/10/31/【Python】解决Sqlite多线程检测/">
+<meta name="twitter:title" content="【每日一题】AcWing 898. 数字三角形">
+<meta name="twitter:description" content="Day2 AcWing 898. 数字三角形">
+  <link rel="canonical" href="https://Olvi73.github.io/2021/01/25/【每日一题】-AcWing-898-数字三角形/">
 
 
 <script id="page-configurations">
@@ -82,7 +82,7 @@
   };
 </script>
 
-  <title>【Python】解决Sqlite多线程检测 | Olvi73's Blog</title>
+  <title>【每日一题】AcWing 898. 数字三角形 | Olvi73's Blog</title>
   
 
 
@@ -246,7 +246,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://Olvi73.github.io/2020/10/31/【Python】解决Sqlite多线程检测/">
+    <link itemprop="mainEntityOfPage" href="https://Olvi73.github.io/2021/01/25/【每日一题】-AcWing-898-数字三角形/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Olvi73">
@@ -258,7 +258,7 @@
       <meta itemprop="name" content="Olvi73's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">【Python】解决Sqlite多线程检测
+        <h1 class="post-title" itemprop="name headline">【每日一题】AcWing 898. 数字三角形
 
           
         </h1>
@@ -274,19 +274,11 @@
                 
               
 
-              <time title="创建时间：2020-10-31 12:16:00" itemprop="dateCreated datePublished" datetime="2020-10-31T12:16:00+08:00">2020-10-31</time>
+              <time title="创建时间：2021-01-25 15:36:00 / 修改时间：15:49:34" itemprop="dateCreated datePublished" datetime="2021-01-25T15:36:00+08:00">2021-01-25</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-25 15:28:23" itemprop="dateModified" datetime="2021-01-25T15:28:23+08:00">2021-01-25</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -295,7 +287,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a></span>
 
                 
                 
@@ -320,7 +312,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>320</span>
+              <span>55</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -343,16 +335,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Python连接Sqlite问题</p>
+        <p><a href="https://www.acwing.com/problem/content/900/" target="_blank" rel="noopener">Day2 AcWing 898. 数字三角形</a></p>
 <a id="more"></a>
-<h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p><code>ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id *** and this is thread id ***.</code></p>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection = sqlite3.connect(<span class="string">'data.db'</span>)</span><br></pre></td></tr></table></figure>
 
-<p>在导入连接数据库的module时，自动连接了数据库，但是为了GUI界面不卡死，在执行对应语句的时候使用的是新建的线程。<br>而sqlite在进行执行增删改操作的时候，操作所在线程必须和connection所在线程一致，但是对于查找操作允许多线程。  </p>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection = sqlite3.connect(<span class="string">'data.db'</span>, check_same_thread=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><ol>
+<li><a href="https://www.acwing.com/problem/content/1017/" target="_blank" rel="noopener">1015. 摘花生</a></li>
+<li><a href="https://www.acwing.com/problem/content/1029/" target="_blank" rel="noopener">1027. 方格取数</a></li>
+<li><a href="https://www.acwing.com/problem/content/384/" target="_blank" rel="noopener">382. K取方格数</a></li>
+</ol>
+<h4 id="个人方法"><a href="#个人方法" class="headerlink" title="个人方法"></a>个人方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int N = 510;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n=0;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    int a[N][N];</span><br><span class="line">    for(int i=1; i&lt;=n; i++)</span><br><span class="line">        for(int j=1; j&lt;=i; j++)</span><br><span class="line">            cin&gt;&gt;a[i][j];</span><br><span class="line">    for(int i=n-1; i; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        for(int j=1; j&lt;=i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            a[i][j]+=max(a[i+1][j],a[i+1][j+1]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;a[1][1];</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>将检测同线程关闭，为了不产生其他麻烦，要确保在进行数据库操作的时候只有一个线程在增删改数据库。  </p>
-
+<h4 id="标准方法"><a href="#标准方法" class="headerlink" title="标准方法"></a>标准方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int N = 510;</span><br><span class="line"></span><br><span class="line">int n;</span><br><span class="line">int f[N][N];</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    for (int i = 1; i &lt;= n; i ++ )</span><br><span class="line">        for (int j = 1; j &lt;= i; j ++ )</span><br><span class="line">            cin &gt;&gt; f[i][j];</span><br><span class="line">    for (int i = n - 1; i; i -- )</span><br><span class="line">        for (int j = 1; j &lt;= i; j ++ )</span><br><span class="line">            f[i][j] += max(f[i + 1][j], f[i + 1][j + 1]);</span><br><span class="line">    cout &lt;&lt; f[1][1] &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -367,11 +360,11 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
             
-              <a href="/tags/Qt-Designer/" rel="tag"># Qt Designer</a>
+              <a href="/tags/C/" rel="tag"># C++</a>
             
-              <a href="/tags/Sqlite/" rel="tag"># Sqlite</a>
+              <a href="/tags/dp/" rel="tag"># dp</a>
             
           </div>
         
@@ -381,8 +374,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/10/31/【Python】解决pyqt5界面运行时卡死/" rel="next" title="【Python】解决pyqt5界面运行时卡死">
-                  <i class="fa fa-chevron-left"></i> 【Python】解决pyqt5界面运行时卡死
+                <a href="/2021/01/25/Hexo-Admin插件安装/" rel="next" title="Hexo Admin插件安装">
+                  <i class="fa fa-chevron-left"></i> Hexo Admin插件安装
                 </a>
               
             </div>
@@ -391,8 +384,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2021/01/09/AcWing 104. 货仓选址/" rel="prev" title="【每日一题】AcWing 104. 货仓选址">
-                  【每日一题】AcWing 104. 货仓选址 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/01/25/【每日一题】AcWing-756-蛇形矩阵/" rel="prev" title="【每日一题】AcWing 756. 蛇形矩阵">
+                  【每日一题】AcWing 756. 蛇形矩阵 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -442,7 +435,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#现象"><span class="nav-text">现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-text">解决办法</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展"><span class="nav-text">拓展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个人方法"><span class="nav-text">个人方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准方法"><span class="nav-text">标准方法</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
