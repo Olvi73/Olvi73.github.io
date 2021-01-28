@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
 <meta property="og:description" content="Day2 AcWing 898. 数字三角形">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-01-26T13:49:35.508Z">
+<meta property="og:updated_time" content="2021-01-28T08:43:36.800Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【每日一题2】AcWing 898. 数字三角形">
 <meta name="twitter:description" content="Day2 AcWing 898. 数字三角形">
@@ -285,7 +285,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-26 21:49:35" itemprop="dateModified" datetime="2021-01-26T21:49:35+08:00">2021-01-26</time>
+                <time title="修改时间：2021-01-28 16:43:36" itemprop="dateModified" datetime="2021-01-28T16:43:36+08:00">2021-01-28</time>
               </span>
             
           
@@ -320,7 +320,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>55</span>
+              <span>71</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -346,14 +346,18 @@
         <p><a href="https://www.acwing.com/problem/content/900/" target="_blank" rel="noopener">Day2 AcWing 898. 数字三角形</a></p>
 <a id="more"></a>
 
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ol>
+<li>动态规划</li>
+<li>自下向上的dp更简单  </li>
+</ol>
 <h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><ol>
 <li><a href="https://www.acwing.com/problem/content/1017/" target="_blank" rel="noopener">1015. 摘花生</a></li>
 <li><a href="https://www.acwing.com/problem/content/1029/" target="_blank" rel="noopener">1027. 方格取数</a></li>
 <li><a href="https://www.acwing.com/problem/content/384/" target="_blank" rel="noopener">382. K取方格数</a></li>
 </ol>
-<h4 id="个人方法"><a href="#个人方法" class="headerlink" title="个人方法"></a>个人方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int N = 510;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n=0;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    int a[N][N];</span><br><span class="line">    for(int i=1; i&lt;=n; i++)</span><br><span class="line">        for(int j=1; j&lt;=i; j++)</span><br><span class="line">            cin&gt;&gt;a[i][j];</span><br><span class="line">    for(int i=n-1; i; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        for(int j=1; j&lt;=i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            a[i][j]+=max(a[i+1][j],a[i+1][j+1]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;a[1][1];</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="个人方法"><a href="#个人方法" class="headerlink" title="个人方法"></a>个人方法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">510</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">int</span> a[N][N];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>; j&lt;=i; j++)</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i][j];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=n<span class="number">-1</span>; i; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>; j&lt;=i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            a[i][j]+=<span class="built_in">max</span>(a[i+<span class="number">1</span>][j],a[i+<span class="number">1</span>][j+<span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;a[<span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="标准方法"><a href="#标准方法" class="headerlink" title="标准方法"></a>标准方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int N = 510;</span><br><span class="line"></span><br><span class="line">int n;</span><br><span class="line">int f[N][N];</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    for (int i = 1; i &lt;= n; i ++ )</span><br><span class="line">        for (int j = 1; j &lt;= i; j ++ )</span><br><span class="line">            cin &gt;&gt; f[i][j];</span><br><span class="line">    for (int i = n - 1; i; i -- )</span><br><span class="line">        for (int j = 1; j &lt;= i; j ++ )</span><br><span class="line">            f[i][j] += max(f[i + 1][j], f[i + 1][j + 1]);</span><br><span class="line">    cout &lt;&lt; f[1][1] &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="标准方法"><a href="#标准方法" class="headerlink" title="标准方法"></a>标准方法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">510</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> f[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++ )</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j ++ )</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; f[i][j];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n - <span class="number">1</span>; i; i -- )</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j ++ )</span><br><span class="line">            f[i][j] += <span class="built_in">max</span>(f[i + <span class="number">1</span>][j], f[i + <span class="number">1</span>][j + <span class="number">1</span>]);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; f[<span class="number">1</span>][<span class="number">1</span>] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -443,7 +447,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展"><span class="nav-text">拓展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个人方法"><span class="nav-text">个人方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准方法"><span class="nav-text">标准方法</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展"><span class="nav-text">拓展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个人方法"><span class="nav-text">个人方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准方法"><span class="nav-text">标准方法</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -461,7 +465,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -487,7 +491,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -559,7 +563,7 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">6k</span>
+    <span title="站点总字数">7k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>

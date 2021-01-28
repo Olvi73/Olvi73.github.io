@@ -57,14 +57,14 @@
 </script>
 
   <meta name="description" content="Day3 AcWing 756. 蛇形矩阵">
-<meta name="keywords" content="AcWing,Algorithm,偏移量技巧,模拟,数组">
+<meta name="keywords" content="AcWing,Algorithm,模拟,偏移量技巧,数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【每日一题3】AcWing 756. 蛇形矩阵">
 <meta property="og:url" content="https://Olvi73.github.io/2021/01/25/【每日一题】AcWing-756-蛇形矩阵/index.html">
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
 <meta property="og:description" content="Day3 AcWing 756. 蛇形矩阵">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-01-26T13:44:28.614Z">
+<meta property="og:updated_time" content="2021-01-28T10:04:55.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【每日一题3】AcWing 756. 蛇形矩阵">
 <meta name="twitter:description" content="Day3 AcWing 756. 蛇形矩阵">
@@ -285,7 +285,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-26 21:44:28" itemprop="dateModified" datetime="2021-01-26T21:44:28+08:00">2021-01-26</time>
+                <time title="修改时间：2021-01-28 18:04:55" itemprop="dateModified" datetime="2021-01-28T18:04:55+08:00">2021-01-28</time>
               </span>
             
           
@@ -320,7 +320,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>20</span>
+              <span>122</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -346,7 +346,16 @@
         <p><a href="https://www.acwing.com/problem/content/758/" target="_blank" rel="noopener">Day3 AcWing 756. 蛇形矩阵</a></p>
 <a id="more"></a>
 
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int N = 110;</span><br><span class="line"></span><br><span class="line">int n, m;</span><br><span class="line">int q[N][N];</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    int dx[] = &#123;-1, 0, 1, 0&#125;, dy[] = &#123;0, 1, 0, -1&#125;;</span><br><span class="line">    int x = 0, y = 0, d = 1;</span><br><span class="line">    for (int i = 1; i &lt;= n * m; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        q[x][y] = i;</span><br><span class="line">        int a = x + dx[d], b = y + dy[d];</span><br><span class="line">        if (a &lt; 0 || a &gt;= n || b &lt; 0 || b &gt;= m || q[a][b])</span><br><span class="line">        &#123;</span><br><span class="line">            d = (d + 1) % 4;</span><br><span class="line">            a = x + dx[d], b = y + dy[d];</span><br><span class="line">        &#125;</span><br><span class="line">        x = a, y = b;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (int i = 0; i &lt; n; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        for (int j = 0; j &lt; m; j ++ )</span><br><span class="line">            cout &lt;&lt; q[i][j] &lt;&lt; &apos; &apos;;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ol>
+<li>偏移量 <code>int dx[] = {-1, 0, 1, 0}, dy[] = {0, 1, 0, -1};</code></li>
+<li>动点d，移动方式：右下左上</li>
+</ol>
+<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><ol>
+<li><a href="https://www.acwing.com/problem/content/846/" target="_blank" rel="noopener">AcWing 844. 走迷宫</a></li>
+<li><a href="https://www.acwing.com/problem/content/1104/" target="_blank" rel="noopener">AcWing 1102. 移动骑士</a></li>
+<li><a href="https://www.acwing.com/problem/content/1423/" target="_blank" rel="noopener">AcWing 1421. 威斯康星方形牧场</a></li>
+</ol>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">110</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="keyword">int</span> q[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">int</span> dx[] = &#123;<span class="number">-1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>&#125;, dy[] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>, y = <span class="number">0</span>, d = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n * m; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        q[x][y] = i;</span><br><span class="line">        <span class="keyword">int</span> a = x + dx[d], b = y + dy[d];</span><br><span class="line">        <span class="keyword">if</span> (a &lt; <span class="number">0</span> || a &gt;= n || b &lt; <span class="number">0</span> || b &gt;= m || q[a][b])</span><br><span class="line">        &#123;</span><br><span class="line">            d = (d + <span class="number">1</span>) % <span class="number">4</span>;</span><br><span class="line">            a = x + dx[d], b = y + dy[d];</span><br><span class="line">        &#125;</span><br><span class="line">        x = a, y = b;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; j ++ )</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; q[i][j] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -365,9 +374,9 @@
             
               <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
             
-              <a href="/tags/偏移量技巧/" rel="tag"># 偏移量技巧</a>
-            
               <a href="/tags/模拟/" rel="tag"># 模拟</a>
+            
+              <a href="/tags/偏移量技巧/" rel="tag"># 偏移量技巧</a>
             
               <a href="/tags/数组/" rel="tag"># 数组</a>
             
@@ -440,7 +449,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-text">代码</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展"><span class="nav-text">拓展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-text">代码</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -458,7 +467,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -484,7 +493,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -556,7 +565,7 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">6k</span>
+    <span title="站点总字数">7k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
