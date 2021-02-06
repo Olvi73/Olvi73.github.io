@@ -56,14 +56,19 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Olvi73&#39;s Blog">
-<meta property="og:url" content="https://Olvi73.github.io/tags/DFS/index.html">
+  <meta name="description" content="1423. 可获得的最大点数">
+<meta name="keywords" content="leetcode,滑动窗口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【leetcode】1423. 可获得的最大点数">
+<meta property="og:url" content="https://Olvi73.github.io/2021/02/06/【leetcode】1423-可获得的最大点数/index.html">
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
+<meta property="og:description" content="1423. 可获得的最大点数">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-02-06T02:16:24.378Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Olvi73&#39;s Blog">
-  <link rel="canonical" href="https://Olvi73.github.io/tags/DFS/">
+<meta name="twitter:title" content="【leetcode】1423. 可获得的最大点数">
+<meta name="twitter:description" content="1423. 可获得的最大点数">
+  <link rel="canonical" href="https://Olvi73.github.io/2021/02/06/【leetcode】1423-可获得的最大点数/">
 
 
 <script id="page-configurations">
@@ -71,13 +76,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>标签: DFS | Olvi73's Blog</title>
+  <title>【leetcode】1423. 可获得的最大点数 | Olvi73's Blog</title>
   
 
 
@@ -232,113 +237,161 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block tag">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">DFS<small>标签</small>
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://Olvi73.github.io/2021/02/06/【leetcode】1423-可获得的最大点数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Olvi73">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Olvi73's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">【leetcode】1423. 可获得的最大点数
+
+          
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2021-02-06 10:05:00 / 修改时间：10:16:24" itemprop="dateCreated datePublished" datetime="2021-02-06T10:05:00+08:00">2021-02-06</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>312</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+        <p><a href="https://leetcode-cn.com/problems/maximum-points-you-can-obtain-from-cards/" target="_blank" rel="noopener">1423. 可获得的最大点数</a></p>
+<a id="more"></a>
 
-  
-  
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><h5 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h5><p>逆向思维，记数组 $cardPoints$ 的长度为 $n$，由于只能从开头和末尾拿 $k$ 张卡牌，所以最后剩下的必然是连续的 $n-k$ 张卡牌。<br>我们可以通过求出剩余卡牌点数之和的最小值，来求出拿走卡牌点数之和的最大值。</p>
+<p><strong>算法</strong><br>由于剩余卡牌是连续的，使用一个固定长度为 $n-k$ 的滑动窗口对数组 $cardPoints$ 进行遍历，求出滑动窗口最小值，然后用所有卡牌的点数之和减去该最小值，即得到了拿走卡牌点数之和的最大值。</p>
+<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><ol>
+<li><a href="https://blog.csdn.net/qq_40803710/article/details/80273811" target="_blank" rel="noopener">accumulate函数</a><br><code>int sum = accumulate(cardPoints.begin(), cardPoints.begin() + windowSize, 0);</code></li>
+</ol>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><h5 id="滑动窗口-1"><a href="#滑动窗口-1" class="headerlink" title="滑动窗口"></a>滑动窗口</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxScore</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; cardPoints, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = cardPoints.<span class="built_in">size</span>();</span><br><span class="line">        <span class="comment">// 滑动窗口大小为 n-k</span></span><br><span class="line">        <span class="keyword">int</span> windowSize = n - k;</span><br><span class="line">        <span class="comment">// 选前 n-k 个作为初始值</span></span><br><span class="line">        <span class="keyword">int</span> sum = accumulate(cardPoints.<span class="built_in">begin</span>(), cardPoints.<span class="built_in">begin</span>() + windowSize, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">int</span> minSum = sum;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = windowSize; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="comment">// 滑动窗口每向右移动一格，增加从右侧进入窗口的元素值，并减少从左侧离开窗口的元素值</span></span><br><span class="line">            sum += cardPoints[i] - cardPoints[i - windowSize];</span><br><span class="line">            minSum = <span class="built_in">min</span>(minSum, sum);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> accumulate(cardPoints.<span class="built_in">begin</span>(), cardPoints.<span class="built_in">end</span>(), <span class="number">0</span>) - minSum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+    </div>
 
-  
     
-    <div class="collection-year">
-      <h1 class="collection-header">2021</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
+    
+    
         
-          <a class="post-title-link" href="/2021/02/05/【洛谷】P1002-过河卒/" itemprop="url">
-            <span itemprop="name">【洛谷】P1002 过河卒</span>
-          </a>
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+            
+              <a href="/tags/滑动窗口/" rel="tag"># 滑动窗口</a>
+            
+          </div>
         
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-02-05T14:51:00+08:00"
-              content="2021-02-05">
-          02-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
         
-          <a class="post-title-link" href="/2021/01/25/【每日一题4】AcWing-1113-红与黑/" itemprop="url">
-            <span itemprop="name">【每日一题4】AcWing 1113. 红与黑</span>
-          </a>
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2021/02/05/【每日一题11】AcWing-1532-找硬币/" rel="next" title="【每日一题11】AcWing 1532. 找硬币">
+                  <i class="fa fa-chevron-left"></i> 【每日一题11】AcWing 1532. 找硬币
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
         
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-01-25T22:07:00+08:00"
-              content="2021-01-25">
-          01-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    </div>
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
@@ -357,6 +410,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -369,6 +427,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-text">思路</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#滑动窗口"><span class="nav-text">滑动窗口</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展"><span class="nav-text">拓展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-text">代码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#滑动窗口-1"><span class="nav-text">滑动窗口</span></a></li></ol></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
@@ -618,6 +678,56 @@
 
   
 
+  
+    
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
   
 
   
