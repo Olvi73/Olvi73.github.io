@@ -56,19 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="766. 托普利茨矩阵">
-<meta name="keywords" content="LeetCode">
+  <meta name="description" content="832. 翻转图像">
+<meta name="keywords" content="LeetCode,Algorithm,异或">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【LeetCodes】766. 托普利茨矩阵">
-<meta property="og:url" content="https://Olvi73.github.io/2021/02/22/【LeetCodes】766-托普利茨矩阵/index.html">
+<meta property="og:title" content="【LeetCode】832. 翻转图像">
+<meta property="og:url" content="https://Olvi73.github.io/2021/02/24/【LeetCode】832-翻转图像/index.html">
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
-<meta property="og:description" content="766. 托普利茨矩阵">
+<meta property="og:description" content="832. 翻转图像">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-02-22T06:42:16.373Z">
+<meta property="og:updated_time" content="2021-02-24T13:31:11.813Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【LeetCodes】766. 托普利茨矩阵">
-<meta name="twitter:description" content="766. 托普利茨矩阵">
-  <link rel="canonical" href="https://Olvi73.github.io/2021/02/22/【LeetCodes】766-托普利茨矩阵/">
+<meta name="twitter:title" content="【LeetCode】832. 翻转图像">
+<meta name="twitter:description" content="832. 翻转图像">
+  <link rel="canonical" href="https://Olvi73.github.io/2021/02/24/【LeetCode】832-翻转图像/">
 
 
 <script id="page-configurations">
@@ -82,7 +82,7 @@
   };
 </script>
 
-  <title>【LeetCodes】766. 托普利茨矩阵 | Olvi73's Blog</title>
+  <title>【LeetCode】832. 翻转图像 | Olvi73's Blog</title>
   
 
 
@@ -248,7 +248,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://Olvi73.github.io/2021/02/22/【LeetCodes】766-托普利茨矩阵/">
+    <link itemprop="mainEntityOfPage" href="https://Olvi73.github.io/2021/02/24/【LeetCode】832-翻转图像/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Olvi73">
@@ -260,7 +260,7 @@
       <meta itemprop="name" content="Olvi73's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">【LeetCodes】766. 托普利茨矩阵
+        <h1 class="post-title" itemprop="name headline">【LeetCode】832. 翻转图像
 
           
         </h1>
@@ -276,7 +276,7 @@
                 
               
 
-              <time title="创建时间：2021-02-22 10:05:00 / 修改时间：14:42:16" itemprop="dateCreated datePublished" datetime="2021-02-22T10:05:00+08:00">2021-02-22</time>
+              <time title="创建时间：2021-02-24 10:38:00 / 修改时间：21:31:11" itemprop="dateCreated datePublished" datetime="2021-02-24T10:38:00+08:00">2021-02-24</time>
             </span>
           
             
@@ -314,7 +314,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>52</span>
+              <span>921</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -337,15 +337,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a href="https://leetcode-cn.com/problems/toeplitz-matrix/" target="_blank" rel="noopener">766. 托普利茨矩阵</a></p>
+        <p><a href="https://leetcode-cn.com/problems/flipping-an-image/" target="_blank" rel="noopener">832. 翻转图像</a></p>
 <a id="more"></a>
 
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ol>
-<li>遍历</li>
-<li>判断每个元素和它右下角的元素相等</li>
+<li>找规律</li>
+<li>异或</li>
 </ol>
-<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><p>1.<a href="https://www.acwing.com/problem/content/756/" target="_blank" rel="noopener">AcWing 754. 平方矩阵 II</a></p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isToeplitzMatrix</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; matrix)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = matrix.<span class="built_in">size</span>(), n = matrix[<span class="number">0</span>].<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (matrix[i][j] != matrix[i - <span class="number">1</span>][j - <span class="number">1</span>]) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>情况一：A[$i$][$left$]=0,A[$i$][$right$]=0。对第 $i$ 行进行水平翻转之后，A[$i$][$left$]=0,A[$i$][$right$]=0。进行反转之后，A[$i$][$left$]=1,A[$i$][$right$]=1。</p>
+<p>情况二：A[$i$][$left$]=1,A[$i$][$right$]=1。对第 $i$ 行进行水平翻转之后，A[$i$][$left$]=1,A[$i$][$right$]=1。进行反转之后，A[$i$][$left$]=0,A[$i$][$right$]=0。</p>
+<p>情况三：A[$i$][$left$]=0,A[$i$][$right$]=1。对第 $i$ 行进行水平翻转之后，A[$i$][$left$]=1,A[$i$][$right$]=0。进行反转之后，A[$i$][$left$]=0,A[$i$][$right$]=1。</p>
+<p>情况四：A[$i$][$left$]=1,A[$i$][$right$]=0。对第 $i$ 行进行水平翻转之后，A[$i$][$left$]=0,A[$i$][$right$]=1。进行反转之后，A[$i$][$left$]=1,A[$i$][$right$]=0。</p>
+<p>情况一和情况二 元素被反转</p>
+<p>情况三和情况四 元素值发生了两次改变，恢复原状</p>
+<p>遍历矩阵的每一行。对于矩阵的第 $i$ 行，初始化 $left=0$ 和 $right=n−1$，进行如下操作：  </p>
+<ul>
+<li><p>当$left&lt;right$,判断A[$i$][$left$]和A[$i$][$right$]是否相等，如果相等则对A[$i$][$left$]和A[$i$][$right$]的值进行反转，如果不相等则不进行任何操作</p>
+</li>
+<li><p>将 $left$ 的值加1，将 $right$ 的值减1，重复上述操作，直到 $left \ge right$</p>
+</li>
+<li><p>如果 $n$ 是奇数，则上述操作结束时，$left$ 和 $right$ 的值相等，都指向第 $i$ 行的中间元素，此时需要对中间元素的值进行反转。</p>
+</li>
+</ul>
+<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><ol>
+<li>$n$为偶数时，<code>n^=1</code> <code>n=n+1</code> 例：<code>n=0 n^=1 -&gt; n=1</code><br>$n$为奇数时，<code>n^=1</code> <code>n=n-1</code> 例：<code>n=1 n^=1 -&gt; n=0</code>  </li>
+</ol>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">flipAndInvertImage</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; A)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = A.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> left = <span class="number">0</span>, right = n - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">                <span class="keyword">if</span> (A[i][left] == A[i][right]) &#123;</span><br><span class="line">                    A[i][left] ^= <span class="number">1</span>;</span><br><span class="line">                    A[i][right] ^= <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                left++;</span><br><span class="line">                right--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (left == right) &#123;</span><br><span class="line">                A[i][left] ^= <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> A;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -362,6 +379,10 @@
             
               <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
             
+              <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            
+              <a href="/tags/异或/" rel="tag"># 异或</a>
+            
           </div>
         
 
@@ -370,8 +391,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2021/02/07/Hexo-代码块中tab替换space/" rel="next" title="Hexo 代码块中tab替换space">
-                  <i class="fa fa-chevron-left"></i> Hexo 代码块中tab替换space
+                <a href="/2021/02/23/【每日一题16】AcWing-1381-阶乘/" rel="next" title="【每日一题16】AcWing 1381. 阶乘">
+                  <i class="fa fa-chevron-left"></i> 【每日一题16】AcWing 1381. 阶乘
                 </a>
               
             </div>
@@ -380,8 +401,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2021/02/22/【每日一题12】AcWing-1341-十三号星期五/" rel="prev" title="【每日一题12】AcWing 1341. 十三号星期五">
-                  【每日一题12】AcWing 1341. 十三号星期五 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/02/24/【每日一题17】AcWing-1353-滑雪场设计/" rel="prev" title="【每日一题17】AcWing 1353.滑雪场设计">
+                  【每日一题17】AcWing 1353.滑雪场设计 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -449,7 +470,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -475,7 +496,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">44</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -547,14 +568,14 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">8k</span>
+    <span title="站点总字数">10k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">8 分钟</span>
+    <span title="站点阅读时长">9 分钟</span>
 </div>
 
 <!--添加运行时间-->
@@ -683,6 +704,56 @@
 
   
 
+  
+    
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
   
 
   
