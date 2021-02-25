@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
 <meta property="og:description" content="T160513 E - 运气">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-02-07T12:11:24.914Z">
+<meta property="og:updated_time" content="2021-02-25T13:27:44.571Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【洛谷】T160513 E - 运气">
 <meta name="twitter:description" content="T160513 E - 运气">
@@ -276,11 +276,19 @@
                 
               
 
-              <time title="创建时间：2021-02-07 20:03:00 / 修改时间：20:11:24" itemprop="dateCreated datePublished" datetime="2021-02-07T20:03:00+08:00">2021-02-07</time>
+              <time title="创建时间：2021-02-07 20:03:00" itemprop="dateCreated datePublished" datetime="2021-02-07T20:03:00+08:00">2021-02-07</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-25 21:27:44" itemprop="dateModified" datetime="2021-02-25T21:27:44+08:00">2021-02-25</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -314,7 +322,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>83</span>
+              <span>98</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -343,6 +351,9 @@
 
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ol>
 <li>dfs取数，然后判断当前数是否为符合题目要求</li>
+<li>将枚举的所有数字组合成一个整数  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">&#123;</span><br><span class="line">    sum=sum*<span class="number">10</span>+s[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
 </ol>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><ol>
 <li>7.70s/632.00KB/487B C++</li>
