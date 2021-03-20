@@ -29,7 +29,7 @@
     scheme: 'Mist',
     version: '7.4.0',
     exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":true,"show_result":true,"style":"flat"},
     back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
@@ -295,7 +295,7 @@
         
          
           
-        <span class="collection-header">很好! 目前共计 90 篇日志。 继续努力。</span>
+        <span class="collection-header">很好! 目前共计 91 篇日志。 继续努力。</span>
       </div>
       
 
@@ -309,6 +309,35 @@
     <div class="collection-year">
       <h1 class="collection-header">2020</h1>
     </div>
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+          <a class="post-title-link" href="/p/cf8f.html" itemprop="url">
+            <span itemprop="name">【Python】@property的使用</span>
+          </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2020-10-13T17:03:59+08:00"
+              content="2020-10-13">
+          10-13
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+  
+  
+
   
 
   <article itemscope itemtype="http://schema.org/Article">
@@ -572,35 +601,6 @@
 
 
 
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/p/1c53.html" itemprop="url">
-            <span itemprop="name">Hello Hexo</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-26T13:00:00+08:00"
-              content="2019-09-26">
-          09-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
 
     </div>
   </div>
@@ -610,7 +610,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/8/">8</a><span class="page-number current">9</span>
+    <a class="extend prev" rel="prev" href="/archives/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/archives/page/10/">10</a><a class="extend next" rel="next" href="/archives/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -658,7 +658,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">90</span>
+          <span class="site-state-item-count">91</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -890,6 +890,31 @@
   
 
   
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: '2BoF0h2i6i4uIS7QVXXvQjuf-gzGzoHsz',
+    appKey: 'HpjIdHik7yGMhGm9XmoL8OrS',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
 
 
 
