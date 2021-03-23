@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>【LeetCode】1800. 最大升序子数组和</title>
+      <link href="p/7af5.html"/>
+      <url>p/7af5.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://leetcode-cn.com/problems/maximum-ascending-subarray-sum/" target="_blank" rel="noopener">第233场周赛 1800. 最大升序子数组和</a></p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ol><li>动态规划</li><li>前缀和</li><li>滑动窗口<ul><li><code>accumulate</code> <a href="https://olvi73.github.io/p/c99.html">【LeetCode】5691. 通过最少操作次数使数组的和相等</a></li></ul></li></ol><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><h5 id="前缀和、动态规划"><a href="#前缀和、动态规划" class="headerlink" title="前缀和、动态规划"></a>前缀和、动态规划</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxAscendingSum</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n=nums.<span class="built_in">size</span>();</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">ans</span><span class="params">(nums)</span></span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]&gt;nums[i<span class="number">-1</span>]) ans[i]+=ans[i<span class="number">-1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> *max_element(ans.<span class="built_in">begin</span>(),ans.<span class="built_in">end</span>());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h5 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxAscendingSum</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.<span class="built_in">size</span>(), l = <span class="number">0</span>, r = <span class="number">1</span>, ans = INT_MIN;</span><br><span class="line">        <span class="keyword">while</span>(r &lt; n)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[r] &gt; nums[r - <span class="number">1</span>])&#123;<span class="comment">// 单调递增</span></span><br><span class="line">                r++;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> sum = accumulate(nums.<span class="built_in">begin</span>() + l, nums.<span class="built_in">begin</span>() + r, <span class="number">0</span>); <span class="comment">// 出现拐点就计算和</span></span><br><span class="line">            ans = <span class="built_in">max</span>(ans, sum);</span><br><span class="line">            l = r;</span><br><span class="line">            r++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> sum = accumulate(nums.<span class="built_in">begin</span>() + l, nums.<span class="built_in">end</span>(), <span class="number">0</span>); <span class="comment">// 计算和</span></span><br><span class="line">        </span><br><span class="line">        ans = <span class="built_in">max</span>(ans, sum);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode周赛 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> dp </tag>
+            
+            <tag> 滑动窗口 </tag>
+            
+            <tag> 前缀和 </tag>
+            
+            <tag> accumulate </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【每日一题 春季5】85. 不用加减乘除做加法 &amp; 191. 位1的个数</title>
       <link href="p/6adb.html"/>
       <url>p/6adb.html</url>
