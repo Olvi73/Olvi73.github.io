@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Olvi73&#39;s Blog">
 <meta property="og:description" content="第232场周赛 5704. 好子数组的最大分数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-03-18T14:20:41.362Z">
+<meta property="og:updated_time" content="2021-03-26T07:54:13.795Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【LeetCode】5704. 好子数组的最大分数">
 <meta name="twitter:description" content="第232场周赛 5704. 好子数组的最大分数">
@@ -314,7 +314,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-18 22:20:41" itemprop="dateModified" datetime="2021-03-18T22:20:41+08:00">2021-03-18</time>
+                <time title="修改时间：2021-03-26 15:54:13" itemprop="dateModified" datetime="2021-03-26T15:54:13+08:00">2021-03-26</time>
               </span>
             
           
@@ -363,7 +363,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>43</span>
+              <span>60</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -394,6 +394,8 @@
 </ol>
 <h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><ol>
 <li><a href="https://www.acwing.com/problem/content/133/" target="_blank" rel="noopener">131. 直方图中最大的矩形</a></li>
+<li><a href="https://leetcode-cn.com/problems/largest-rectangle-in-histogram/" target="_blank" rel="noopener">84. 柱状图中最大的矩形</a></li>
+<li><a href="https://www.acwing.com/activity/content/code/content/43105/" target="_blank" rel="noopener">单调栈模板</a></li>
 </ol>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maximumScore</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.<span class="built_in">size</span>();</span><br><span class="line">        vector&lt;int&gt; h(n + 2, -1), l(n + 2), r(n + 2), stk(n + 2);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++ ) h[i] = nums[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> tt = <span class="number">0</span>;</span><br><span class="line">        stk[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++ ) &#123;</span><br><span class="line">            <span class="keyword">while</span> (h[stk[tt]] &gt;= h[i]) tt -- ;</span><br><span class="line">            l[i] = stk[tt];</span><br><span class="line">            stk[ ++ tt] = i;</span><br><span class="line">        &#125;</span><br><span class="line">        tt = <span class="number">0</span>, stk[<span class="number">0</span>] = n + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = n; i; i -- ) &#123;</span><br><span class="line">            <span class="keyword">while</span> (h[stk[tt]] &gt;= h[i]) tt -- ;</span><br><span class="line">            r[i] = stk[tt];</span><br><span class="line">            stk[ ++ tt] = i;</span><br><span class="line">        &#125;</span><br><span class="line">        k ++ ;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++ )</span><br><span class="line">            <span class="keyword">if</span> (l[i] &lt; k &amp;&amp; r[i] &gt; k)</span><br><span class="line">                res = <span class="built_in">max</span>(res, (r[i] - l[i] - <span class="number">1</span>) * h[i]);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
@@ -505,7 +507,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-count">97</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -531,7 +533,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-count">70</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -594,14 +596,14 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">22k</span>
+    <span title="站点总字数">23k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">20 分钟</span>
+    <span title="站点阅读时长">21 分钟</span>
 </div>
 
 <!--添加运行时间-->
