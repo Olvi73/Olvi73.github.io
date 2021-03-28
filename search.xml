@@ -2820,7 +2820,10 @@
   <entry>
     <title>【洛谷】第三届传智杯决赛B组</title>
     <url>/p/409.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="A-课程"><a href="#A-课程" class="headerlink" title="A 课程"></a>A 课程</h3><p><a href="https://www.luogu.com.cn/problem/T172096?contestId=42343" target="_blank" rel="noopener">T172096 课程</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://www.luogu.com.cn/contest/42343" target="_blank" rel="noopener">第三届传智杯决赛B组</a></p>
+<a id="more"></a>
+
+<h3 id="A-课程"><a href="#A-课程" class="headerlink" title="A 课程"></a>A 课程</h3><p><a href="https://www.luogu.com.cn/problem/T172096?contestId=42343" target="_blank" rel="noopener">T172096 课程</a></p>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ol>
 <li>枚举 </li>
 </ol>
