@@ -2909,9 +2909,9 @@
       </tags>
   </entry>
   <entry>
-    <title>【每日一题 春季9】15. 二维数组中的查找 &amp; 74. 搜索二维矩阵</title>
+    <title>【每日一题 春季12】15. 二维数组中的查找 &amp; 74. 搜索二维矩阵</title>
     <url>/p/19dd.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://www.acwing.com/problem/content/16/" target="_blank" rel="noopener">Day9 AcWing 15. 二维数组中的查找</a><br><a href="https://leetcode-cn.com/problems/search-a-2d-matrix/" target="_blank" rel="noopener">Day9 LeetCode 74. 搜索二维矩阵</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://www.acwing.com/problem/content/16/" target="_blank" rel="noopener">Day12 AcWing 15. 二维数组中的查找</a><br><a href="https://leetcode-cn.com/problems/search-a-2d-matrix/" target="_blank" rel="noopener">Day12 LeetCode 74. 搜索二维矩阵</a></p>
 <a id="more"></a>
 
 
@@ -2938,9 +2938,9 @@
       </tags>
   </entry>
   <entry>
-    <title>【每日一题 春季10】93. 递归实现组合型枚举 &amp;  90. 子集 II</title>
+    <title>【每日一题 春季13】93. 递归实现组合型枚举 &amp;  90. 子集 II</title>
     <url>/p/2434.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://www.acwing.com/problem/content/95/" target="_blank" rel="noopener">Day10 AcWing 93. 递归实现组合型枚举</a><br><a href="https://leetcode-cn.com/problems/subsets-ii/" target="_blank" rel="noopener">Day10 LeetCode 90. 子集 II</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://www.acwing.com/problem/content/95/" target="_blank" rel="noopener">Day13 AcWing 93. 递归实现组合型枚举</a><br><a href="https://leetcode-cn.com/problems/subsets-ii/" target="_blank" rel="noopener">Day13 LeetCode 90. 子集 II</a></p>
 <a id="more"></a>
 
 <h4 id="输入、输出"><a href="#输入、输出" class="headerlink" title="输入、输出"></a>输入、输出</h4><p>93. 递归实现组合型枚举</p>
@@ -2972,6 +2972,38 @@
         <tag>回溯</tag>
         <tag>AcWing</tag>
         <tag>递归</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【每日一题 春季14】1381. 阶乘 &amp; 1006. 笨阶乘</title>
+    <url>/p/389d.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://www.acwing.com/problem/content/1383/" target="_blank" rel="noopener">Day14 AcWing 1381. 阶乘</a><br><a href="https://leetcode-cn.com/problems/clumsy-factorial/" target="_blank" rel="noopener">Day14 LeetCode 1006. 笨阶乘</a></p>
+<a id="more"></a>
+
+
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ol>
+<li>设$n!$末尾有$k$个0，求$\frac {n!}{10^k} mod 10$</li>
+<li>栈模拟，将所有需要进行乘除的数字计算好，然后加入栈中计算加减，实现加减乘除的优先级计算。</li>
+</ol>
+<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><ol>
+<li><a href="https://www.acwing.com/problem/content/199/" target="_blank" rel="noopener">AcWing 197. 阶乘分解</a></li>
+<li><a href="https://leetcode-cn.com/problems/evaluate-reverse-polish-notation" target="_blank" rel="noopener">150. 逆波兰表达式求值</a></li>
+<li><a href="https://leetcode-cn.com/problems/basic-calculator" target="_blank" rel="noopener">224. 基本计算器</a></li>
+<li><a href="https://leetcode-cn.com/problems/basic-calculator-ii" target="_blank" rel="noopener">227. 基本计算器 II</a></li>
+<li><a href="olvi73.github.io/p/86b7.html">寒假每日一题Day16</a></li>
+</ol>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><h5 id="1381-阶乘"><a href="#1381-阶乘" class="headerlink" title="1381. 阶乘"></a>1381. 阶乘</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">30</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="keyword">int</span> path[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> start)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (u &gt; m)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i ++ )</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d "</span>, path[i]);</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt;= n; i ++ )</span><br><span class="line">        &#123;</span><br><span class="line">            path[u] = i;</span><br><span class="line">            dfs(u + <span class="number">1</span>, i + <span class="number">1</span>);</span><br><span class="line">            path[u] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">    dfs(<span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="1006-笨阶乘"><a href="#1006-笨阶乘" class="headerlink" title="1006. 笨阶乘"></a>1006. 笨阶乘</h5><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">clumsy</span><span class="params">(<span class="keyword">int</span> N)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; stk;</span><br><span class="line">        stk.push(N);</span><br><span class="line">        N--;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>; <span class="comment">// 用于控制乘、除、加、减</span></span><br><span class="line">        <span class="keyword">while</span> (N &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (index % <span class="number">4</span> == <span class="number">0</span>) &#123;</span><br><span class="line">                stk.top() *= N;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (index % <span class="number">4</span> == <span class="number">1</span>) &#123;</span><br><span class="line">                stk.top() /= N;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (index % <span class="number">4</span> == <span class="number">2</span>) &#123;</span><br><span class="line">                stk.push(N);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                stk.push(-N);</span><br><span class="line">            &#125;</span><br><span class="line">            index++;</span><br><span class="line">            N--;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 把栈中所有的数字依次弹出求和</span></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (!stk.empty()) &#123;</span><br><span class="line">            sum += stk.top();</span><br><span class="line">            stk.pop();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>栈</tag>
+        <tag>Algorithm</tag>
+        <tag>AcWing</tag>
+        <tag>数论</tag>
       </tags>
   </entry>
 </search>
