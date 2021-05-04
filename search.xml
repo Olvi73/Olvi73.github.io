@@ -3062,9 +3062,11 @@
       </tags>
   </entry>
   <entry>
-    <title>第十二届蓝桥杯省赛C++ B组</title>
+    <title>第十二届蓝桥杯省赛C++ B组题解</title>
     <url>/p/9a5.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="A-空间"><a href="#A-空间" class="headerlink" title="A.空间"></a>A.空间</h3><p><img src="https://gitee.com/Olvi73/img/raw/master/%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%81%E8%B5%9BC++%20B%E7%BB%84/A%E7%A9%BA%E9%97%B4.png" alt></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>第十二届蓝桥杯省赛C++ B组题解</p>
+<a id="more"></a>
+<h3 id="A-空间"><a href="#A-空间" class="headerlink" title="A.空间"></a>A.空间</h3><p><img src="https://gitee.com/Olvi73/img/raw/master/%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%81%E8%B5%9BC++%20B%E7%BB%84/A%E7%A9%BA%E9%97%B4.png" alt></p>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>256MB=256 * 1024 * 1024 B</p>
 <p>一个字节(Byte)等于8位(Bit)，所以一个32位二进制数占4B</p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="number">256</span> * <span class="number">1024</span> * <span class="number">1024</span> / <span class="number">4</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
