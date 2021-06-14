@@ -3129,9 +3129,7 @@
   <entry>
     <title>编译原理考试总结</title>
     <url>/p/c34b.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote>
-<p><a href="https://www.bilibili.com/video/BV1ft4y1X7p6" target="_blank" rel="noopener">期末复习</a></p>
-</blockquote>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://www.bilibili.com/video/BV1ft4y1X7p6" target="_blank" rel="noopener">期末复习</a></p>
 <a id="more"></a>
 
 <h3 id="构造文法"><a href="#构造文法" class="headerlink" title="构造文法"></a>构造文法</h3><ol>
@@ -3179,6 +3177,443 @@
       </categories>
       <tags>
         <tag>whimsy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据挖掘复习</title>
+    <url>/p/4757.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>期末复习</p>
+<a id="more"></a>
+
+<h1 id="数据挖掘"><a href="#数据挖掘" class="headerlink" title="数据挖掘"></a>数据挖掘</h1><h2 id="数据挖掘基本任务"><a href="#数据挖掘基本任务" class="headerlink" title="数据挖掘基本任务"></a>数据挖掘基本任务</h2><p>数据挖掘的基本任务包括利用分类与预测、聚类分析、关联规则、时序模式、偏差检测、智能推荐等方法，帮助企业提取数据中蕴含的商业价值，提高企业的竞争力。</p>
+<h2 id="数据挖掘建模过程"><a href="#数据挖掘建模过程" class="headerlink" title="数据挖掘建模过程"></a>数据挖掘建模过程</h2><ol>
+<li>定义挖掘目标</li>
+<li>数据取样</li>
+<li>数据探索</li>
+<li>数据预处理</li>
+<li>挖掘建模</li>
+<li>模型评价</li>
+</ol>
+<h3 id="1-目标定义"><a href="#1-目标定义" class="headerlink" title="1.目标定义"></a>1.目标定义</h3><ol>
+<li><p>任务理解</p>
+</li>
+<li><p>指标明确</p>
+</li>
+</ol>
+<h3 id="2-数据采集"><a href="#2-数据采集" class="headerlink" title="2.数据采集"></a>2.数据采集</h3><ol>
+<li>建模抽样</li>
+<li>质量把控</li>
+<li>实时采集</li>
+</ol>
+<h3 id="3-数据整理"><a href="#3-数据整理" class="headerlink" title="3.数据整理"></a>3.数据整理</h3><ol>
+<li>数据探索</li>
+<li>数据清洗</li>
+<li>数据变换</li>
+</ol>
+<h3 id="4-构建模型"><a href="#4-构建模型" class="headerlink" title="4.构建模型"></a>4.构建模型</h3><ol>
+<li>模式发现</li>
+<li>构建模型</li>
+<li>验证模型</li>
+</ol>
+<h3 id="5-模型评价"><a href="#5-模型评价" class="headerlink" title="5.模型评价"></a>5.模型评价</h3><ol>
+<li>设定评价标准</li>
+<li>多模型对比</li>
+<li>模型优化</li>
+</ol>
+<h3 id="6-模型发布"><a href="#6-模型发布" class="headerlink" title="6.模型发布"></a>6.模型发布</h3><ol>
+<li>模型部署</li>
+<li>模型重构</li>
+</ol>
+<h2 id="数据探索"><a href="#数据探索" class="headerlink" title="数据探索"></a>数据探索</h2><p><strong>需要考虑的问题</strong></p>
+<ol>
+<li>样本数据集的数量和质量是否满足模型构建的要求？</li>
+<li>有没有出现从未设想过的数据状态？</li>
+<li>其中有没有明显的规律和趋势？</li>
+<li>各因素之间有什么样的关联性？</li>
+</ol>
+<h3 id="1-数据质量分析"><a href="#1-数据质量分析" class="headerlink" title="1.数据质量分析"></a>1.数据质量分析</h3><h4 id="主要任务"><a href="#主要任务" class="headerlink" title="主要任务"></a>主要任务</h4><p>检查原始数据中是否存在脏数据，脏数据一般指不符合要求以及不能直接进行相应分析的数据，如缺失值、异常值、不一致值、重复数据及含有特殊符号的数据</p>
+<h4 id="缺失值分析"><a href="#缺失值分析" class="headerlink" title="缺失值分析"></a>缺失值分析</h4><h5 id="产生的原因"><a href="#产生的原因" class="headerlink" title="产生的原因"></a>产生的原因</h5><ol>
+<li>信息暂时无法获取，或者获取信息的代价太大</li>
+<li>信息被遗漏，包括人为因素遗漏及数据采集设备故障导致的非人为因素遗漏</li>
+<li>属性值不存在，如一个未婚者的配偶姓名，一个儿童的固定收入</li>
+</ol>
+<h5 id="缺失值的影响"><a href="#缺失值的影响" class="headerlink" title="缺失值的影响"></a>缺失值的影响</h5><ol>
+<li>数据挖掘建模将丢失大量的有用信息</li>
+<li>数据挖掘模型所变现出的不确定性更加显著，规律更难把握</li>
+<li>包含空值的数据回事建模过程陷入混乱，导致不可靠的输出</li>
+</ol>
+<h5 id="缺失值的分析"><a href="#缺失值的分析" class="headerlink" title="缺失值的分析"></a>缺失值的分析</h5><ol>
+<li>使用简单的统计分析，可以得到含有缺失值的属性的个数及每个属性的未缺失数、缺失数与缺失率等</li>
+<li>对缺失值的处理<ul>
+<li>删除存在缺失值的记录</li>
+<li>对可能值进行插补</li>
+<li>不处理</li>
+</ul>
+</li>
+</ol>
+<h4 id="异常值分析"><a href="#异常值分析" class="headerlink" title="异常值分析"></a>异常值分析</h4><p>异常值分析是检验数据是否有录入错误，是否含有不合常理的数据。</p>
+<p>异常值是指样本中的个别值，其数值明显偏离其他的观测值。</p>
+<p>异常值也称为<strong>离群点</strong>，异常值分析也称为<strong>离群点分析</strong></p>
+<h5 id="1-简单统计量分析"><a href="#1-简单统计量分析" class="headerlink" title="1. 简单统计量分析"></a>1. 简单统计量分析</h5><p>对变量进行描述性统计，进而查看哪些数据是不合理的，如统计最大值和最小值，用来判断这个变量的取值是否超出了合理范围。</p>
+<h5 id="2-3σ准则"><a href="#2-3σ准则" class="headerlink" title="2. 3σ准则"></a>2. 3σ准则</h5><blockquote>
+<p>在 <a href="http://www.baike.com/sowiki/正态分布?prd=content_doc_search" target="_blank" rel="noopener">正态分布</a> 中σ代表 <a href="http://www.baike.com/sowiki/标准差?prd=content_doc_search" target="_blank" rel="noopener">标准差</a> ,μ代表 <a href="http://www.baike.com/sowiki/均值?prd=content_doc_search" target="_blank" rel="noopener">均值</a> 。x=μ即为图像的对称轴<br>3σ原则为<br>数值分布在（μ-σ,μ+σ)中的概率为0.6826<br>数值分布在（μ-2σ,μ+2σ)中的概率为0.9544<br>数值分布在（μ-3σ,μ+3σ)中的概率为0.9974<br>可以认为，Y 的取值几乎全部集中在（μ-3σ,μ+3σ)] <a href="http://www.baike.com/sowiki/区间?prd=content_doc_search" target="_blank" rel="noopener">区间</a>内，超出这个范围的可能性仅占不到0.3%.</p>
+</blockquote>
+<p>3σ准则是建立在正态分布的等精度重复测量基础上而造成奇异数据的干扰或噪声难以满足正态分布.如果一组测量数据中某个测量值的残余误差的绝对值 νi＞3σ,则该测量值为坏值,应剔除.通常把等于 ±3σ的误差作为极限误差,对于正态分布的随机误差,落在 ±3σ以外的概率只有 0.27%,它在有限次测量中发生的可能性很小,故存在3σ准则.3σ准则是最常用也是最简单的粗大误差判别准则,它一般应用于测量次数充分多( n ≥30)或当 n＞10做粗略判别时的情况.</p>
+<h5 id="3-箱型图分析"><a href="#3-箱型图分析" class="headerlink" title="3. 箱型图分析"></a>3. 箱型图分析</h5><p><img src="https://bkimg.cdn.bcebos.com/pic/aa18972bd40735fade9ad1029e510fb30f240826?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2U4MA==,g_7,xp_5,yp_5/format,f_auto" alt="箱型图"></p>
+<h4 id="一致性分析"><a href="#一致性分析" class="headerlink" title="一致性分析"></a>一致性分析</h4><p>数据不一致性是指数据的矛盾性、不相容性。直接对不一致的数据进行挖掘，可能会产生与实际相违背的挖掘结果。</p>
+<p>在数据挖掘过程中，不一致的数据的产生主要发生在数据集成的过程中，可能是由于被挖掘数据来自于不同的数据源，对于重复存放的数据未能进行一致性更新造成的。</p>
+<h3 id="2-数据特征分析"><a href="#2-数据特征分析" class="headerlink" title="2. 数据特征分析"></a>2. 数据特征分析</h3><h4 id="1-分布分析"><a href="#1-分布分析" class="headerlink" title="1. 分布分析"></a>1. 分布分析</h4><h5 id="1-定量数据的分布分析"><a href="#1-定量数据的分布分析" class="headerlink" title="1. 定量数据的分布分析"></a>1. 定量数据的分布分析</h5><ol>
+<li>求极差</li>
+<li>决定组距和组数</li>
+<li>决定分点</li>
+<li>列出频率分布表</li>
+<li>绘制频率分布直方图</li>
+</ol>
+<p><strong>要求</strong></p>
+<ol>
+<li>各组之间必须是相互排斥的</li>
+<li>各组必须将所有的数据包括在内</li>
+<li>各组的组宽最好相等</li>
+</ol>
+<h5 id="2-定性数据分析"><a href="#2-定性数据分析" class="headerlink" title="2. 定性数据分析"></a>2. 定性数据分析</h5><p>对于定性变量，常常根据变量的分类类型来分组。</p>
+<h4 id="2-对比分析"><a href="#2-对比分析" class="headerlink" title="2. 对比分析"></a>2. 对比分析</h4><ol>
+<li>绝对数比较</li>
+<li>相对数比较<ol>
+<li>结构相对数：将同一总体内的部分数值与全部数值进行对比求得比重，用以说明事物的性质、结构或质量</li>
+<li>比例相对数：将同一总体内不同部分的数值进行对比，表明总体内各部分的比例关系。</li>
+<li>比较相对数：将同一时期两个性质相同的指标数值进行对比，说明同类现象在不同空间条件下的数量对比关系。</li>
+<li>强度相对数：将两个性质不同但有一定联系的总量指标进行对比，用以说明现象的强度、密度和普遍程度。</li>
+<li>计划完成程度相对数：将某一时期实际完成数与计划完成数进行对比用以说明计划完成程度。</li>
+<li>动态相对数：将同一现象在不同时期的指标数值进行对比，用以说明发展法向和变化速度，如发展速度、增长速度等。</li>
+</ol>
+</li>
+</ol>
+<h4 id="3-统计量分析"><a href="#3-统计量分析" class="headerlink" title="3. 统计量分析"></a>3. 统计量分析</h4><h5 id="1-集中趋势程度"><a href="#1-集中趋势程度" class="headerlink" title="1. 集中趋势程度"></a>1. 集中趋势程度</h5><ol>
+<li>均值</li>
+<li>中位数</li>
+<li>众数</li>
+</ol>
+<h5 id="2-离中趋势度量"><a href="#2-离中趋势度量" class="headerlink" title="2. 离中趋势度量"></a>2. 离中趋势度量</h5><ol>
+<li>极差</li>
+<li>标准差</li>
+<li>变异系数</li>
+<li>四分位数间距</li>
+</ol>
+<h4 id="4-周期性分析"><a href="#4-周期性分析" class="headerlink" title="4. 周期性分析"></a>4. 周期性分析</h4><p>周期性分析是探索某个变量是否随着时间的变化而呈现出某种周期变化趋势。</p>
+<h4 id="5-贡献度分析"><a href="#5-贡献度分析" class="headerlink" title="5. 贡献度分析"></a>5. 贡献度分析</h4><p>贡献度分析又称帕累托分析，它的原理是帕累托法则，又称20/80定律。同样的投入放在不同的地方会产生不同的效益，例如，对一个公司来讲，80%的利润常常来自于20%最畅销的产品，而其他80%的产品只产生了20%的利润。</p>
+<h4 id="6-相关性分析"><a href="#6-相关性分析" class="headerlink" title="6. 相关性分析"></a>6. 相关性分析</h4><h5 id="1-直接绘制散点图"><a href="#1-直接绘制散点图" class="headerlink" title="1. 直接绘制散点图"></a>1. 直接绘制散点图</h5><p>判断两个变量是否具有线性相关关系最直观的方法 是直接绘制散点图</p>
+<h5 id="2-绘制散点图矩阵"><a href="#2-绘制散点图矩阵" class="headerlink" title="2. 绘制散点图矩阵"></a>2. 绘制散点图矩阵</h5><h5 id="3-计算相关系数"><a href="#3-计算相关系数" class="headerlink" title="3. 计算相关系数"></a>3. 计算相关系数</h5><p>为了更加准确地描述变量之间的线性相关程度，可以通过相关系数的计算来进行相关分析</p>
+<ol>
+<li>Pearson相关系数（要求连续变量的取值服从正态分布）</li>
+<li>Spearman秩相关系数（不服从正态分布的变量或等级变量之间的关系）</li>
+<li>判定系数，判定系数是相关系数的平方，用$r^2$表示。$r^2$越接近1，表明x与y之间的相关性越强，$r^2$越接近0，表明x与y之间几乎没有直线相关关系</li>
+</ol>
+<h3 id="Python主要数据探索函数"><a href="#Python主要数据探索函数" class="headerlink" title="Python主要数据探索函数"></a>Python主要数据探索函数</h3><h4 id="1-基本统计特征函数"><a href="#1-基本统计特征函数" class="headerlink" title="1. 基本统计特征函数"></a>1. 基本统计特征函数</h4><table>
+<thead>
+<tr>
+<th align="center">方法名</th>
+<th align="center">函数功能</th>
+<th align="center">所属库</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">sum()</td>
+<td align="center">计算数据样本的总和</td>
+<td align="center">pandas</td>
+</tr>
+<tr>
+<td align="center">mean()</td>
+<td align="center">计算数据样本的算术平均数</td>
+<td align="center">pandas</td>
+</tr>
+<tr>
+<td align="center">var()</td>
+<td align="center">计算数据样本的方差</td>
+<td align="center">pandas</td>
+</tr>
+<tr>
+<td align="center">std()</td>
+<td align="center">计算数据样本的标准差</td>
+<td align="center">pandas</td>
+</tr>
+<tr>
+<td align="center">corr()</td>
+<td align="center">计算数据样本的Spearman(Pearson)相关系数矩阵</td>
+<td align="center">pandas</td>
+</tr>
+<tr>
+<td align="center">cov()</td>
+<td align="center">计算数据样本的协方差矩阵</td>
+<td align="center">pandas</td>
+</tr>
+<tr>
+<td align="center">skew()</td>
+<td align="center">样本值的偏度（三阶矩）</td>
+<td align="center">pandas</td>
+</tr>
+<tr>
+<td align="center">kurt()</td>
+<td align="center">样本值的峰度（四阶矩）</td>
+<td align="center">pandas</td>
+</tr>
+<tr>
+<td align="center">describe()</td>
+<td align="center">给出样本的基本描述（基本统计量如均值、标准差等）</td>
+<td align="center">pandas</td>
+</tr>
+</tbody></table>
+<h4 id="2-拓展统计特征函数"><a href="#2-拓展统计特征函数" class="headerlink" title="2. 拓展统计特征函数"></a>2. 拓展统计特征函数</h4><p>累计计算(<code>cum</code>)和滚动计算(<code>pd.rolling_</code>)，如<code>cumsum()</code> 依次给出前1,2，… n个数的和，<code>rolling(2).sum()</code>依次对相邻的两项求和</p>
+<h4 id="3-统计绘图函数"><a href="#3-统计绘图函数" class="headerlink" title="3. 统计绘图函数"></a>3. 统计绘图函数</h4><table>
+<thead>
+<tr>
+<th align="center">绘图函数名</th>
+<th align="center">绘图函数功能</th>
+<th align="center">所属工具箱</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">plot()</td>
+<td align="center">绘制线性二维图，折线图</td>
+<td align="center">Matplotlib/pandas</td>
+</tr>
+<tr>
+<td align="center">pie()</td>
+<td align="center">绘制饼图</td>
+<td align="center">Matplotlib/pandas</td>
+</tr>
+<tr>
+<td align="center">hist()</td>
+<td align="center">绘制二维条形直方图，可显示数据的分配情形</td>
+<td align="center">Matplotlib/pandas</td>
+</tr>
+<tr>
+<td align="center">boxplot()</td>
+<td align="center">绘制样本数据的箱型图</td>
+<td align="center">pandas</td>
+</tr>
+<tr>
+<td align="center">plot(logy = True)</td>
+<td align="center">绘制y轴的对数图形</td>
+<td align="center">pandas</td>
+</tr>
+<tr>
+<td align="center">plot(yerr = error)</td>
+<td align="center">绘制误差条形图</td>
+<td align="center">pandas</td>
+</tr>
+</tbody></table>
+<h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><h3 id="1-数据清洗"><a href="#1-数据清洗" class="headerlink" title="1. 数据清洗"></a>1. 数据清洗</h3><p>数据清洗主要是删除原始数据集中的无关数据、重复数据，平滑噪声数据，筛选掉与挖掘主题无关的数据，处理缺失值、异常值等</p>
+<h4 id="1-缺失值处理"><a href="#1-缺失值处理" class="headerlink" title="1. 缺失值处理"></a>1. 缺失值处理</h4><p>处理方法可分为三类：删除记录、数据插补和不处理</p>
+<table>
+<thead>
+<tr>
+<th>插补方法</th>
+<th>方法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>均值、中位数、众数插补</td>
+<td>根据属性值的类型，用该属性取值的平均数、中位数、众数进行插补</td>
+</tr>
+<tr>
+<td>使用固定值</td>
+<td>将缺失的属性值用一个常量替换</td>
+</tr>
+<tr>
+<td>最近临插补</td>
+<td>在记录中找到与缺失样本最接近的样本的该属性卡值插补</td>
+</tr>
+<tr>
+<td>回归方法</td>
+<td>对带有缺失值的变量，根据已有数据和与其有关的其他变量（因变量）的数据建立拟合模型来预测确实的属性值</td>
+</tr>
+<tr>
+<td>插值法</td>
+<td>插值法是利用已知点建立合适的插值函数$f(x)$，未知数由对应点$x_i$求出的函数值$f(x_i)$近似代替</td>
+</tr>
+</tbody></table>
+<h5 id="1-拉格朗日插值法"><a href="#1-拉格朗日插值法" class="headerlink" title="1. 拉格朗日插值法"></a>1. 拉格朗日插值法</h5><h5 id="2-牛顿插值法"><a href="#2-牛顿插值法" class="headerlink" title="2. 牛顿插值法"></a>2. 牛顿插值法</h5><h4 id="2-异常值处理"><a href="#2-异常值处理" class="headerlink" title="2. 异常值处理"></a>2. 异常值处理</h4><table>
+<thead>
+<tr>
+<th>异常值处理方法</th>
+<th>方法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>删除含有异常值的记录</td>
+<td>直接将含有异常值的记录删除</td>
+</tr>
+<tr>
+<td>视为缺失值</td>
+<td>将异常值视为缺失值，利用缺失值处理的方法进行处理</td>
+</tr>
+<tr>
+<td>平均值修正</td>
+<td>可用前后两个观测值修正该异常值</td>
+</tr>
+<tr>
+<td>不处理</td>
+<td>直接在具有异常值的数据集上进行挖掘建模</td>
+</tr>
+</tbody></table>
+<h3 id="2-数据集成"><a href="#2-数据集成" class="headerlink" title="2. 数据集成"></a>2. 数据集成</h3><p>数据挖掘需要的数据往往分布在不同的数据源中，数据集成就是将多个数据源合并存放在一个一致的数据储存位置（如数据仓库）中的过程。</p>
+<h4 id="1-实体识别"><a href="#1-实体识别" class="headerlink" title="1. 实体识别"></a>1. 实体识别</h4><ol>
+<li>同名异义：数据源A中的属性ID和数据源B三的属性ID分别描述的是菜品编号和订单编号，即描述的是不同的实体</li>
+<li>异名同义：数据源A中的sales_dt和数据源B中的sales_date都是描述销售日期的</li>
+<li>单位不统一：描述同一个实体时分别用的是国际单位和中国传统的计量单位</li>
+</ol>
+<h4 id="2-冗余属性识别"><a href="#2-冗余属性识别" class="headerlink" title="2. 冗余属性识别"></a>2. 冗余属性识别</h4><ol>
+<li>同一属性多次出现</li>
+<li>同一属性命名不一致导致重复</li>
+</ol>
+<h4 id="3-数据变换"><a href="#3-数据变换" class="headerlink" title="3. 数据变换"></a>3. 数据变换</h4><p>主要是对数据进行规范化处理，将数据转换成“适当的”形式，以适用于挖掘任务和算法的需要。</p>
+<ol>
+<li><p>简单函数变换，对原始数据进行某些数学函数变换，包括平方、取对数、差分运算等</p>
+</li>
+<li><p>规范化</p>
+<ol>
+<li><p>最小-最大规范化，也叫离差标准化，对原始数据的线性变换，将数值映射到[0,1]之间。</p>
+<p>$$ x^*=\frac{(x-min)}{(max-min)} $$</p>
+</li>
+<li><p>0-均值规范化，也叫标准差标准化，经过处理的数据均值为0，标准差为1。</p>
+<p>$$ x^*= \frac{x-\overline{x}}{σ} $$</p>
+</li>
+<li><p>小数定标规范化，通过移动属性值的小数位数，将属性值映射到[-1,1]之间，移动的小数位数取决于属性值绝对值的最大值</p>
+<p>$$ x^*=\frac{x}{10^k} $$</p>
+</li>
+</ol>
+</li>
+<li><p>连续属性离散化，如某些分类算法，ID3算法、Apriori算法，要求数据是分类属性形式。</p>
+<ol>
+<li>离散化的过程，连续属性离散化就是在数据的取值范围内设定若干个离散的划分点，将取值范围划分为一些离散化的区间，最后用不同的符号或整数值代表落在每个子区间中的数据值</li>
+<li>常用的离散化方法，等宽法和（一维）聚类。</li>
+</ol>
+<ul>
+<li>等宽法，将属性的值域分成具有相同宽度的区间，区间的个数由数据本身的特点决定或者用户指定，类似与制作频率分布表</li>
+<li>等频法，将相同数量的记录放进每个区间<ul>
+<li>这两种方法简单，易于操作，但都需要认为规定划分区间的个数。同时，等宽法缺点在于它对离群点比较敏感，倾向于不均匀地把属性值分布到各个区间。有些区间包含许多数据，而另外一些区间的数据极少，这样会严重损坏建立的决策模型。等频法虽然避免了上述问题的产生，却可能将相同的数据值分布到不同的区间，以满足每个区间中固定的数据个数</li>
+</ul>
+</li>
+<li>基于聚类分析的方法，一维聚类方法包括两个步骤：首先将连续属性的值用聚类算法（如K-Means算法)进行聚类，然后再将聚类得到的簇进行处理，合并到一个簇的连续属性值做同一标记。聚类分析的离散化方法也需要用户制定簇的个数，从而决定产生的区间数。</li>
+</ul>
+</li>
+<li><p>属性构造，利用已有的属性集构造新的属性，并加入到现有的属性集合中。</p>
+</li>
+<li><p>小波变换 P(88)，信号分析手段</p>
+</li>
+</ol>
+<h3 id="3-数据规约"><a href="#3-数据规约" class="headerlink" title="3. 数据规约"></a>3. 数据规约</h3><p>在大数据集上进行复杂的数据分析和挖掘需要很长时间。数据规约产生更小且保持原数据完整性的新数据集，在规约后的数据集上进行分析和挖掘将提高效率。</p>
+<p><strong>意义</strong></p>
+<ol>
+<li>降低无效、错误数据对建模的影响，提高建模的准确性</li>
+<li>少量却具有代表性的数据将大幅缩减数据挖掘的时间</li>
+<li>降低储存数据的成本</li>
+</ol>
+<h4 id="1-属性规约"><a href="#1-属性规约" class="headerlink" title="1. 属性规约"></a>1. 属性规约</h4><p>属性规约通过属性合并创建新属性维数，或者通过直接删除不相关的属性（维）来减少数据维数，从而提高数据挖掘的效率，降低计算成本。属性规约的目标是寻找最小的属性子集并确保新数据子集的概率分布尽可能接近原来的数据集的概率分布。</p>
+<table>
+<thead>
+<tr>
+<th>属性规约方法</th>
+<th>方法描述</th>
+<th>方法解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>合并属性</td>
+<td>将一些旧属性合并为新属性</td>
+<td>初始属性集：{$A_1,A_2,A_3,B_1,B_2,B_3,C$},{$A_1,A_2,A_3$}-&gt;$A$ {$B_1,B_2,B_3$}-&gt;$B$ 规约后属性集{$A,B,C$}</td>
+</tr>
+<tr>
+<td>逐步向前选择</td>
+<td>从一个空属性集开始，每次从原来属性集合中选择一个当前最优的属性添加到当前属性子集中。直到无法选出最优属性或满足一定阈值约束为止</td>
+<td>初始属性集：{$A_1,A_2,A_3,A_4,A_5,A_6$},{}-&gt;{$A_1$}-&gt;{$A_1,A_4$} 规约后属性集{$A_1,A_4,A_6$}</td>
+</tr>
+<tr>
+<td>逐步向后删除</td>
+<td>从一个全属性集开始，每次从当前属性子集中选择一个当前最差的属性并将其从当前属性子集中消去。直到无法选出最差属性为止或满足一定阈值约束为止</td>
+<td>初始属性集：{$A_1,A_2,A_3,A_4,A_5,A_6$},{$A_1,A_3,A_4,A_5,A_6$}-&gt;{$A_1,A_4,A_5,A_6$}   规约后属性集{$A_1,A_4,A_6$}</td>
+</tr>
+<tr>
+<td>决策树归纳</td>
+<td>利用决策树的归纳方法对初始数据进行分类归纳学习，获得一个初始决策树，所有没有出现在这个决策树上的属性均可认为是无关属性，因此将这些属性从初始集合中删除，就可以获得一个较优的属性子集</td>
+<td>略</td>
+</tr>
+<tr>
+<td>主成分分析</td>
+<td>用较少的变量去解释原始数据中的大部分变量，即将许多线性相关性很高的变量转化成彼此互相独立或不相关的变量</td>
+<td>略</td>
+</tr>
+</tbody></table>
+<p>逐步向前选择、逐步向后删除和决策树归纳是属于直接删除不相关属性（维）的方法。主成分分析法是一种用于连续属性的数据降维方法，它构造了原始数据的一个正交变换，新空间的基底去除了原始空间基底下数据的相关性，只需要使用少数新变量就能解释原始数据中的大部分变异。</p>
+<p>在应用中，通常是选出比原始变量个数少，能解释大部分数据中的变量的几个新变量，即所谓主成分，来代替原始变量进行建模。</p>
+<h5 id="主成分分析计算步骤"><a href="#主成分分析计算步骤" class="headerlink" title="主成分分析计算步骤"></a>主成分分析计算步骤</h5><ol>
+<li><p>设原始变量$X_1,X_2,…,X_p$的$n$次观测数据矩阵为式<br>$$<br>X=\begin{Bmatrix}<br>X_{11} &amp; X_{12} &amp; \dots &amp; X_{13} \\<br>X_{21} &amp; X_{22} &amp; \dots &amp; X_{23} \\<br>\dots &amp; \dots &amp; \dots &amp; \dots \\<br>X_{n1} &amp; X_{n2} &amp; \dots &amp; X_{np} \\<br>\end{Bmatrix}=(X_1,X_2,\dots,X_P)<br>$$</p>
+</li>
+<li><p>将数据矩阵按列进行中心标准化。</p>
+</li>
+<li><p>求相关系数矩阵 $\mathbf{R}$ ，$ \mathbf{R} = (r_{ij})_ {p\times p} $ ， $r_{ij}$定义为式，其中$r_{ij}=r_{ji},r_{ij}=1$<br>$$<br>r_{rj}=<br>\sum\nolimits_{k=1}^n (x_{ki}-\overline{x_i})(x_{kj}-\overline{x_j})<br>/<br>\sqrt{<br>\sum\nolimits_{k=1}^n (x_{ki}-\overline{x_i})^2<br>\sum\nolimits_{k=1}^n (x_{kj}-\overline{x_j})^2<br>}<br>$$</p>
+</li>
+<li><p>求$\mathbf{R}$的特征方程 $ det(\mathbf{R}-λ\mathbf{E})=0 $ 的特征根$λ_1\geλ_2\ge…λ_p&gt;0$</p>
+</li>
+<li><p>确定主成分个数，α根据实际问题确定，一般取80%<br>$$<br>m:<br>\frac{\sum\nolimits_{i=1}^m \lambda_i}<br>{\sum\nolimits_{i=1}^p \lambda_i}<br>\ge<br>\alpha<br>$$</p>
+</li>
+<li><p>计算m个相应的单位特征向量，如式<br>$$<br> \mathbf{\beta_1}=\begin{pmatrix}<br> \beta_1 \\ \beta_2 \\ …\\ \beta_{p1}<br> \end{pmatrix}<br> ,<br> \mathbf{\beta_2}=\begin{pmatrix}<br> \beta_{12} \\ \beta_{22} \\ …\\ \beta_{p2}<br> \end{pmatrix}<br> ,<br> \mathbf{\beta_m}=\begin{pmatrix}<br> \beta_{1m} \\ \beta_{2m} \\ …\\ \beta_{pm}<br> \end{pmatrix}<br>$$</p>
+</li>
+</ol>
+<ol start="7">
+<li>计算主成分，如式<br>$$<br>Z_i=\beta_{1i}X_1+\beta_{2i}X_2+…+\beta_{pi}X_p (i=1,2,…,m)<br>$$</li>
+</ol>
+<p>python中主成分分析函数：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sklearn.decomposition.PCA(n_components=<span class="literal">None</span>, copy=<span class="literal">True</span>, whiten=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>意义</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>n_components</td>
+<td>PCA算法中索要保留的主成分个数n，就是保留下来的特征个数n</td>
+<td>int/str</td>
+</tr>
+<tr>
+<td>copy</td>
+<td>表示是否在运行算法时，将原始训练数据复制一份</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>whiten</td>
+<td>白化，使得每个特征具有相同的方差</td>
+<td>bool</td>
+</tr>
+</tbody></table>
+<h4 id="2-数值规约"><a href="#2-数值规约" class="headerlink" title="2. 数值规约"></a>2. 数值规约</h4><p>数值规约通过选择代替的、较小的数据来减少数据量，包括有参数方法和无参数方法两类。有参数方法是使用一个模型来评估数据，只需存放参数，而不需要存放实际数据，例如回归（线性回归和多元回归）和对数线性模型（近似离散属性集中的多维概率分布）。无参数方法就需要存放实际数据，如直方图、聚类、抽样（采样）。</p>
+<ol>
+<li>直方图</li>
+<li>聚类</li>
+<li>抽样<ul>
+<li>常用抽样方法<ol>
+<li>s个样本无放回简单随机抽样</li>
+<li>s个样本有放回地简单随机抽样</li>
+<li>聚类抽样</li>
+<li>分层抽样</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>参数回归</li>
+</ol>
+<h3 id="4-Python主要数据预处理函数"><a href="#4-Python主要数据预处理函数" class="headerlink" title="4. Python主要数据预处理函数"></a>4. Python主要数据预处理函数</h3>]]></content>
+      <categories>
+        <category>数据挖掘</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>机器学习</tag>
+        <tag>数据挖掘</tag>
       </tags>
   </entry>
 </search>
