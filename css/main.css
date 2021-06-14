@@ -1768,7 +1768,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f530d0;
+  background: #98faff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2640,24 +2640,10 @@ hr {
   border-bottom-color: #222;
 }
 .sidebar {
-  right: -320px;
+  left: -320px;
 }
 .sidebar.sidebar-active {
-  right: 0;
-}
-.sidebar-toggle,
-.back-to-top {
-  left: auto;
-  right: 30px;
-}
-@media (max-width: 991px) {
-  .sidebar-toggle,
-  .back-to-top {
-    right: 20px;
-  }
-}
-.book-mark-link {
-  left: 30px;
+  left: 0;
 }
 .sidebar {
   transition: all 0.4s;
