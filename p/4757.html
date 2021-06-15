@@ -65,7 +65,8 @@
 <meta property="og:description" content="期末复习">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://gitee.com/Olvi73/img/raw/master/DM%20Box-plot.jpg">
-<meta property="og:updated_time" content="2021-06-15T13:07:38.626Z">
+<meta property="og:image" content="https://gitee.com/Olvi73/img/raw/master/%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4.jpg">
+<meta property="og:updated_time" content="2021-06-15T13:59:34.878Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据挖掘复习">
 <meta name="twitter:description" content="期末复习">
@@ -316,7 +317,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-15 21:07:38" itemprop="dateModified" datetime="2021-06-15T21:07:38+08:00">2021-06-15</time>
+                <time title="修改时间：2021-06-15 21:59:34" itemprop="dateModified" datetime="2021-06-15T21:59:34+08:00">2021-06-15</time>
               </span>
             
           
@@ -365,7 +366,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>6.7k</span>
+              <span>8.3k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -375,7 +376,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>6 分钟</span>
+              <span>8 分钟</span>
             </span>
           
 
@@ -430,7 +431,7 @@
 <li>模型部署</li>
 <li>模型重构</li>
 </ol>
-<h2 id="数据探索"><a href="#数据探索" class="headerlink" title="数据探索"></a>数据探索</h2><p><strong>需要考虑的问题</strong></p>
+<h2 id="第三章-数据探索-P39"><a href="#第三章-数据探索-P39" class="headerlink" title="第三章 数据探索 P39"></a>第三章 数据探索 P39</h2><p><strong>需要考虑的问题</strong></p>
 <ol>
 <li>样本数据集的数量和质量是否满足模型构建的要求？</li>
 <li>有没有出现从未设想过的数据状态？</li>
@@ -608,7 +609,7 @@
 <td align="center">pandas</td>
 </tr>
 </tbody></table>
-<h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><h3 id="1-数据清洗"><a href="#1-数据清洗" class="headerlink" title="1. 数据清洗"></a>1. 数据清洗</h3><p>数据清洗主要是删除原始数据集中的无关数据、重复数据，平滑噪声数据，筛选掉与挖掘主题无关的数据，处理缺失值、异常值等</p>
+<h2 id="第四章-数据预处理-P75"><a href="#第四章-数据预处理-P75" class="headerlink" title="第四章 数据预处理 P75"></a>第四章 数据预处理 P75</h2><h3 id="1-数据清洗"><a href="#1-数据清洗" class="headerlink" title="1. 数据清洗"></a>1. 数据清洗</h3><p>数据清洗主要是删除原始数据集中的无关数据、重复数据，平滑噪声数据，筛选掉与挖掘主题无关的数据，处理缺失值、异常值等</p>
 <h4 id="1-缺失值处理"><a href="#1-缺失值处理" class="headerlink" title="1. 缺失值处理"></a>1. 缺失值处理</h4><p>处理方法可分为三类：删除记录、数据插补和不处理</p>
 <table>
 <thead>
@@ -765,9 +766,8 @@
 </li>
 <li><p>计算m个相应的单位特征向量，如式<br>$$<br> \mathbf{\beta_1}=\begin{pmatrix}<br> \beta_1 \\ \beta_2 \\ …\\ \beta_{p1}<br> \end{pmatrix}<br> ,<br> \mathbf{\beta_2}=\begin{pmatrix}<br> \beta_{12} \\ \beta_{22} \\ …\\ \beta_{p2}<br> \end{pmatrix}<br> ,<br> \mathbf{\beta_m}=\begin{pmatrix}<br> \beta_{1m} \\ \beta_{2m} \\ …\\ \beta_{pm}<br> \end{pmatrix}<br>$$</p>
 </li>
-</ol>
-<ol start="7">
-<li>计算主成分，如式<br>$$<br>Z_i=\beta_{1i}X_1+\beta_{2i}X_2+…+\beta_{pi}X_p (i=1,2,…,m)<br>$$</li>
+<li><p>计算主成分，如式<br>$$<br>Z_i=\beta_{1i}X_1+\beta_{2i}X_2+…+\beta_{pi}X_p (i=1,2,…,m)<br>$$</p>
+</li>
 </ol>
 <p>python中主成分分析函数：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.decomposition.PCA(n_components=<span class="literal">None</span>, copy=<span class="literal">True</span>, whiten=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
@@ -812,7 +812,143 @@
 </li>
 <li>参数回归</li>
 </ol>
-<h3 id="4-Python主要数据预处理函数"><a href="#4-Python主要数据预处理函数" class="headerlink" title="4. Python主要数据预处理函数"></a>4. Python主要数据预处理函数</h3>
+<h3 id="4-Python主要数据预处理函数"><a href="#4-Python主要数据预处理函数" class="headerlink" title="4. Python主要数据预处理函数"></a>4. Python主要数据预处理函数</h3><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>函数功能</th>
+<th>所属拓展库</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>interpolate</td>
+<td>一维、高维数据插值</td>
+<td>SciPy</td>
+</tr>
+<tr>
+<td>unique</td>
+<td>去除数据中的重复元素，得到单值元素列表，它是对象的方法名</td>
+<td>pandas/Numpy</td>
+</tr>
+<tr>
+<td>isnull</td>
+<td>判断是否空值</td>
+<td>pandas</td>
+</tr>
+<tr>
+<td>notnull</td>
+<td>判断是否非空值</td>
+<td>pandas</td>
+</tr>
+<tr>
+<td>PCA</td>
+<td>对指标变量矩阵进行主成分分析</td>
+<td>Scikit-learn</td>
+</tr>
+<tr>
+<td>random</td>
+<td>生成随机矩阵</td>
+<td>Numpy</td>
+</tr>
+</tbody></table>
+<h2 id="第五章-挖掘建模-P102"><a href="#第五章-挖掘建模-P102" class="headerlink" title="第五章 挖掘建模 P102"></a>第五章 挖掘建模 P102</h2><h3 id="1-分类与预测"><a href="#1-分类与预测" class="headerlink" title="1. 分类与预测"></a>1. 分类与预测</h3><h4 id="1-实现过程"><a href="#1-实现过程" class="headerlink" title="1. 实现过程"></a>1. 实现过程</h4><pre><code>1. 分类是构造一个分类模型，输入样本的属性值，输出对应的类别，将每个样本映射到预先定义好的类别。分类模型建立在已有类标记的数据集上，模型在已有样本上的准确率可以方便的绩，所以分类属于有监督的学习。
+   2. 预测，预测是建立两种或两种以上变量间相互依赖的函数模型，然后进行预测或控制
+   3. 实现过程，分类为和预测的实现过程类似，以分类模型为例。</code></pre><p><img src="https://gitee.com/Olvi73/img/raw/master/%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4.jpg" alt="分类模型的实现步骤"></p>
+<h4 id="2-常用的分类与预测算法"><a href="#2-常用的分类与预测算法" class="headerlink" title="2. 常用的分类与预测算法"></a>2. 常用的分类与预测算法</h4><table>
+<thead>
+<tr>
+<th>算法名称</th>
+<th>算法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>回归分析</td>
+<td>回归分析是确定预测属性（数值型）与其他变量间相互依赖的定量关系最常用的统计学方法，包括线性回归、非线性回归、Logistic回归、岭回归、主成分回归、最小二乘回归等模型</td>
+</tr>
+<tr>
+<td>决策树</td>
+<td>决策树采用自顶向下的递归方式，在内部节点进行属性值的比较，并根据不同的属性值从该节点向下分支，最终得到的叶节点是学习划分的类</td>
+</tr>
+<tr>
+<td>人工神经网络</td>
+<td>人工神经网络是一种模型大脑神经网络结构和功能而建立的信息处理系统，表示神经网络的输入与输出变量之间的关系的模型</td>
+</tr>
+<tr>
+<td>贝叶斯网络</td>
+<td>贝叶斯网络又称信度网络，是Bayes方法的扩展，是目前不确定知识表达和推理领域最有效的理论模型之一</td>
+</tr>
+<tr>
+<td>支持向量机</td>
+<td>支持向量机是一种通过某种非现行映射，把低维的非现行可分转化为高维的线性可分，在高维空间进行线性分析的算法</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>回归分析</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>回归模型名称</th>
+<th>适用条件</th>
+<th>算法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>线性回归</td>
+<td>因变量与自变量是线性关系</td>
+<td>对一个或多个自变量与因变量之间的线性关系进行建模，可用最小二乘法求解模型系数</td>
+</tr>
+<tr>
+<td>非线性回归</td>
+<td>因变量与自变量之间不都是线性关系</td>
+<td>对一个或多个自变量和因变量之间的非线性关系进行建模。如果可转化为线性关系则用线性关系求解，否则用非线性最小二乘方法求解</td>
+</tr>
+<tr>
+<td>Logistic回归</td>
+<td>一般是因变量的有1-0（是否）两种取值</td>
+<td>是广义线性回归模型的特例，利用Logistic函数将因变量的取值范围控制在的0和1之间，表示取值1的概率</td>
+</tr>
+<tr>
+<td>岭回归</td>
+<td>参与建模的自变量之间具有多重共线性</td>
+<td>是一种改进最小二乘估计的方法</td>
+</tr>
+<tr>
+<td>主成分回归</td>
+<td>参与建模的自变量之间具有多重共线性</td>
+<td>根据主成分分析思想，对最小二乘法的一种改进，它是参数估计的一种有偏估计，可消除自变量之间的多重共线性</td>
+</tr>
+</tbody></table>
+<h4 id="4-决策树"><a href="#4-决策树" class="headerlink" title="4. 决策树"></a>4. 决策树</h4><table>
+<thead>
+<tr>
+<th>决策树算法</th>
+<th>算法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID3算法</td>
+<td>其核心是在决策树的各级节点上，使用信息增益方法作为属性的选择标准，来帮助确定生成每个节点时所应采用的合适属性</td>
+</tr>
+<tr>
+<td>C4.5算法</td>
+<td>相对于ID3算法的重要改进是使用信息增益率来选择节点属性。C4.5算法可以克服ID3算法存在的不足：ID3算法只适用于离散的描述属性，而C4.5算法既能够处理离散的描述属性，也可以处理连续的描述属性</td>
+</tr>
+<tr>
+<td>CART算法</td>
+<td>CART决策树是一种十分有效的非参数分类和回归方法，通过构建树、修剪树、评估树来构建一个二叉树。当中节点是连续变量时，该树为回归树，当终节点是分类变量时，该树为分类树</td>
+</tr>
+</tbody></table>
+<h4 id="5-人工神经网络"><a href="#5-人工神经网络" class="headerlink" title="5. 人工神经网络"></a>5. 人工神经网络</h4><h3 id="2-聚类分析"><a href="#2-聚类分析" class="headerlink" title="2. 聚类分析"></a>2. 聚类分析</h3><h4 id="K-Means聚类分析"><a href="#K-Means聚类分析" class="headerlink" title="K-Means聚类分析"></a>K-Means聚类分析</h4><p>K-Means算法是典型的基于举例的非层次聚类算法，在最小化误差函数的基础上将数据划分为预定的磊K，采用距离作为相似性评价指标，即认为两个对象的距离越近，相似度越大</p>
+<h5 id="1-算法过程"><a href="#1-算法过程" class="headerlink" title="1. 算法过程"></a>1. 算法过程</h5><ol>
+<li>从$n$个样本数据中随机选取$k$个对象作为初始的聚类中心。</li>
+<li>分别计算每个样本到各个聚类中心的距离，将对象分配到距离最近的聚类中。</li>
+<li>所有对象分配完成后，重新计算$k$个聚类的中心。</li>
+<li>与前一次计算得到的$k$个聚类中心比较，如果聚类中心发生变化，转至步骤2，否则继续步骤5</li>
+<li>当质心不发生变化时，停止并输出聚类结果。</li>
+</ol>
+<h3 id="3-关联规则"><a href="#3-关联规则" class="headerlink" title="3. 关联规则"></a>3. 关联规则</h3><h4 id="Apriori算法"><a href="#Apriori算法" class="headerlink" title="Apriori算法"></a>Apriori算法</h4><p>核心思想：通过连接产生候选项与其支持度，然后通过剪枝生成频繁项集。</p>
+
     </div>
 
     
@@ -900,7 +1036,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据挖掘"><span class="nav-text">数据挖掘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据挖掘基本任务"><span class="nav-text">数据挖掘基本任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据挖掘建模过程"><span class="nav-text">数据挖掘建模过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-目标定义"><span class="nav-text">1.目标定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-数据采集"><span class="nav-text">2.数据采集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-数据整理"><span class="nav-text">3.数据整理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-构建模型"><span class="nav-text">4.构建模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-模型评价"><span class="nav-text">5.模型评价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-模型发布"><span class="nav-text">6.模型发布</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据探索"><span class="nav-text">数据探索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-数据质量分析"><span class="nav-text">1.数据质量分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主要任务"><span class="nav-text">主要任务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缺失值分析"><span class="nav-text">缺失值分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#产生的原因"><span class="nav-text">产生的原因</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缺失值的影响"><span class="nav-text">缺失值的影响</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缺失值的分析"><span class="nav-text">缺失值的分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异常值分析"><span class="nav-text">异常值分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-简单统计量分析"><span class="nav-text">1. 简单统计量分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3σ准则"><span class="nav-text">2. 3σ准则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-箱型图分析"><span class="nav-text">3. 箱型图分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一致性分析"><span class="nav-text">一致性分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-数据特征分析"><span class="nav-text">2. 数据特征分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-分布分析"><span class="nav-text">1. 分布分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-定量数据的分布分析"><span class="nav-text">1. 定量数据的分布分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-定性数据分析"><span class="nav-text">2. 定性数据分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-对比分析"><span class="nav-text">2. 对比分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-统计量分析"><span class="nav-text">3. 统计量分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-集中趋势程度"><span class="nav-text">1. 集中趋势程度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-离中趋势度量"><span class="nav-text">2. 离中趋势度量</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-周期性分析"><span class="nav-text">4. 周期性分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-贡献度分析"><span class="nav-text">5. 贡献度分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-相关性分析"><span class="nav-text">6. 相关性分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-直接绘制散点图"><span class="nav-text">1. 直接绘制散点图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-绘制散点图矩阵"><span class="nav-text">2. 绘制散点图矩阵</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-计算相关系数"><span class="nav-text">3. 计算相关系数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python主要数据探索函数"><span class="nav-text">Python主要数据探索函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-基本统计特征函数"><span class="nav-text">1. 基本统计特征函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-拓展统计特征函数"><span class="nav-text">2. 拓展统计特征函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-统计绘图函数"><span class="nav-text">3. 统计绘图函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据预处理"><span class="nav-text">数据预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-数据清洗"><span class="nav-text">1. 数据清洗</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-缺失值处理"><span class="nav-text">1. 缺失值处理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-拉格朗日插值法"><span class="nav-text">1. 拉格朗日插值法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-牛顿插值法"><span class="nav-text">2. 牛顿插值法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-异常值处理"><span class="nav-text">2. 异常值处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-数据集成"><span class="nav-text">2. 数据集成</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-实体识别"><span class="nav-text">1. 实体识别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-冗余属性识别"><span class="nav-text">2. 冗余属性识别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-数据变换"><span class="nav-text">3. 数据变换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-数据规约"><span class="nav-text">3. 数据规约</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-属性规约"><span class="nav-text">1. 属性规约</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#主成分分析计算步骤"><span class="nav-text">主成分分析计算步骤</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-数值规约"><span class="nav-text">2. 数值规约</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Python主要数据预处理函数"><span class="nav-text">4. Python主要数据预处理函数</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据挖掘"><span class="nav-text">数据挖掘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据挖掘基本任务"><span class="nav-text">数据挖掘基本任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据挖掘建模过程"><span class="nav-text">数据挖掘建模过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-目标定义"><span class="nav-text">1.目标定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-数据采集"><span class="nav-text">2.数据采集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-数据整理"><span class="nav-text">3.数据整理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-构建模型"><span class="nav-text">4.构建模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-模型评价"><span class="nav-text">5.模型评价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-模型发布"><span class="nav-text">6.模型发布</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章-数据探索-P39"><span class="nav-text">第三章 数据探索 P39</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-数据质量分析"><span class="nav-text">1.数据质量分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主要任务"><span class="nav-text">主要任务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缺失值分析"><span class="nav-text">缺失值分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#产生的原因"><span class="nav-text">产生的原因</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缺失值的影响"><span class="nav-text">缺失值的影响</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缺失值的分析"><span class="nav-text">缺失值的分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异常值分析"><span class="nav-text">异常值分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-简单统计量分析"><span class="nav-text">1. 简单统计量分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3σ准则"><span class="nav-text">2. 3σ准则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-箱型图分析"><span class="nav-text">3. 箱型图分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一致性分析"><span class="nav-text">一致性分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-数据特征分析"><span class="nav-text">2. 数据特征分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-分布分析"><span class="nav-text">1. 分布分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-定量数据的分布分析"><span class="nav-text">1. 定量数据的分布分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-定性数据分析"><span class="nav-text">2. 定性数据分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-对比分析"><span class="nav-text">2. 对比分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-统计量分析"><span class="nav-text">3. 统计量分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-集中趋势程度"><span class="nav-text">1. 集中趋势程度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-离中趋势度量"><span class="nav-text">2. 离中趋势度量</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-周期性分析"><span class="nav-text">4. 周期性分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-贡献度分析"><span class="nav-text">5. 贡献度分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-相关性分析"><span class="nav-text">6. 相关性分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-直接绘制散点图"><span class="nav-text">1. 直接绘制散点图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-绘制散点图矩阵"><span class="nav-text">2. 绘制散点图矩阵</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-计算相关系数"><span class="nav-text">3. 计算相关系数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python主要数据探索函数"><span class="nav-text">Python主要数据探索函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-基本统计特征函数"><span class="nav-text">1. 基本统计特征函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-拓展统计特征函数"><span class="nav-text">2. 拓展统计特征函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-统计绘图函数"><span class="nav-text">3. 统计绘图函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章-数据预处理-P75"><span class="nav-text">第四章 数据预处理 P75</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-数据清洗"><span class="nav-text">1. 数据清洗</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-缺失值处理"><span class="nav-text">1. 缺失值处理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-拉格朗日插值法"><span class="nav-text">1. 拉格朗日插值法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-牛顿插值法"><span class="nav-text">2. 牛顿插值法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-异常值处理"><span class="nav-text">2. 异常值处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-数据集成"><span class="nav-text">2. 数据集成</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-实体识别"><span class="nav-text">1. 实体识别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-冗余属性识别"><span class="nav-text">2. 冗余属性识别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-数据变换"><span class="nav-text">3. 数据变换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-数据规约"><span class="nav-text">3. 数据规约</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-属性规约"><span class="nav-text">1. 属性规约</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#主成分分析计算步骤"><span class="nav-text">主成分分析计算步骤</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-数值规约"><span class="nav-text">2. 数值规约</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Python主要数据预处理函数"><span class="nav-text">4. Python主要数据预处理函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章-挖掘建模-P102"><span class="nav-text">第五章 挖掘建模 P102</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-分类与预测"><span class="nav-text">1. 分类与预测</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-实现过程"><span class="nav-text">1. 实现过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-常用的分类与预测算法"><span class="nav-text">2. 常用的分类与预测算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-决策树"><span class="nav-text">4. 决策树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-人工神经网络"><span class="nav-text">5. 人工神经网络</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-聚类分析"><span class="nav-text">2. 聚类分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#K-Means聚类分析"><span class="nav-text">K-Means聚类分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-算法过程"><span class="nav-text">1. 算法过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-关联规则"><span class="nav-text">3. 关联规则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Apriori算法"><span class="nav-text">Apriori算法</span></a></li></ol></li></ol></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -1007,14 +1143,14 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">31k</span>
+    <span title="站点总字数">33k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">28 分钟</span>
+    <span title="站点阅读时长">30 分钟</span>
 </div>
 
 <!--添加运行时间-->
